@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./index/image/logo.svg" />
+    <link rel="stylesheet" href="./index/css/style.css">
+    <title>Guide Japan-Главная</title>
+</head>
+<body class="body">
+    <div class="preloader">
+        <h2 class="preloader__text-1" >
+            l
+        </h2>
+        <h2 class="preloader__text-2" >
+            o
+        </h2>
+        <h2 class="preloader__text-3">
+            a
+        </h2>
+        <h2 class="preloader__text-4">
+            d
+        </h2>
+        <h2 class="preloader__text-5">
+            i
+        </h2>
+        <h2 class="preloader__text-6" >
+            n
+        </h2>
+        <h2 class="preloader__text-7">
+            g
+        </h2>
+        <h2 class="preloader__text-8">
+            ...
+        </h2>
+
+      </div>
+<div id="element">
+    <div class="overflow"></div>
+</div>
+<main class="main" id="main">
+    <div class="container">
+        <div class="burger-menu">
+            <div class="burger-icon" id="burger-icon">
+              &#9776;
+            </div>
+            <nav class="menu" id="menu">
+              <div class="close-icon" id="close-icon">&#10006;</div>
+              <ul>
+                <li><a href="./index.html">Главная</a></li>
+                <li><a href="./contacts.html">Контакты</a></li>
+                <li><a href="./catalog.html">Достопримечательности</a></li>
+              </ul>
+            </nav>
+        </div>  
+        <div class="main__wrap">
+            <div class="main__header">
+                <div class="main__header__top">
+                    <img src="./index/image/logo.svg" alt="logo">
+                    <a class="main__header__top-logo" href="#">Guide Tokio</a>
+                </div>
+                <div class="main__header__nav">
+                    <a href="./contacts.html">Контакты</a>
+                    <a href="./catalog.html">Достопримечательности</a>
+                </div>
+            </div>
+            <div class="main__arrow">
+                <p id="btn" class="main__arrow-p">🡸</p>
+                <p id="btn1" class="main__arrow-p">🡺</p>
+            </div>                
+            <div class="main__title">
+
+                <h2 class="main__title-h2">
+                    Путеводитель по городу Токио 
+                </h2>
+                <h2 class="main__title-h3" >Перейти к карте</h2>
+                <div class="main__title-img">
+                    <a href="#scroll" id="arrow">
+                        <abbr data-title="Ехали вниз ">
+                            <img id="tab" src="./index/image/Arrow_1.svg" alt="arrow">
+                        </abbr>
+                    </a>
+                </div>
+            </div>    
+        </div>
+    </div>
+</main>
+<div class="slaider">
+    <h2>Какие места стоит посетить</h2>
+    <div class="slaider__img">
+        <img  src="./index/image/png1.jpg" alt="card" title="Вишневые деревья вдоль улицы в центре города Токио">
+        <img src="./index/image/png2.jpg" alt="card" title="Храм Сэнсо-дзи">
+        <img src="./index/image/png3.jpg" alt="card" title="Фудзияма-вершина">
+        <img src="./index/image/png4.jpg" alt="card" title="Гиндза">
+        <img src="./index/image/png5.jpg" alt="card" title="Императорский дворец">
+    </div>
+</div >
+<div class="block" id="scroll">
+    <div class="block__cart" >
+        <div class="block__cart1">
+            <h3 class="block__cart1__h3" >Токио</h3>
+        </div>
+        <div id="YMapsID" class="block__cart1-ymaps" ></div>
+    </div>
+    <p> <span class="span" title="вадим52">
+        Токио
+    </span>  - столица Японии, государства в Восточной Азии,
+     расположенного на четырех крупных островах: Хоккайдо,
+      Хонсю, Сикоку и Кюсю - и многочисленных мелких островах (всего около 4 тыс.).
+       Город принадлежит к самым крупным современным «сверхгородам»,
+       численность населения которых перешагнула за десять миллионов.</p>
+</div>
+<div class="footer">
+    <div class="footer__block-1">
+        <h4 >Навигация</h4>
+        <a href="../index/index.html">
+            Главная</a>
+        <a href="./catalog.html">Контакты</a>
+        <a href="./catalog.html">
+        Достопримечательности</a>
+    </div>
+    <div class="footer__block-2">
+        <h4>Техническая поддержка</h4>
+        <a href="./contacts.html">Если у вас возникли <br> вопросы или проблемы, <br>мы готовы помочь!</a>
+        <a href="./contacts.html">Тех-поддержка</a>
+    </div>
+    <div class="footer__block-3">
+        <h4>Политика</h4>
+        <a href="./index/image/">Условия использования</a>
+        <a href="#">Конфиденциальность</a>
+        <a href="#">Настройки Cookie</a>
+        <a>Правила</a>
+    </div>
+    <div class="footer__block-4" id="footer__block-4" >
+        <h4>Подписка на рассылку</h4>
+        <form class="footer__block-btn">
+             <input id="input" type="email" placeholder="Введите почту">
+             <button type="button" id="button_sudmit">Подписаться</button>
+        </form>
+    </div>
+</div>  
+</body>
+<script src="//api-maps.yandex.ru/2.1/?lang=ru_RU"></script>        
+<script src="./index/index.js"></script>
+</html>

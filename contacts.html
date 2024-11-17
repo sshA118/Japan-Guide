@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./index/image/logo.svg" />
+    <link rel="stylesheet" href="./contacts/css/contacts.css">
+    <title>Контакты</title>
+</head>
+<body>
+    <div class="preloader">
+        <h2 class="preloader__text-1" >
+            l
+        </h2>
+        <h2 class="preloader__text-2" >
+            o
+        </h2>
+        <h2 class="preloader__text-3">
+            a
+        </h2>
+        <h2 class="preloader__text-4">
+            d
+        </h2>
+        <h2 class="preloader__text-5">
+            i
+        </h2>
+        <h2 class="preloader__text-6" >
+            n
+        </h2>
+        <h2 class="preloader__text-7">
+            g
+        </h2>
+        <h2 class="preloader__text-8">
+            ...
+        </h2>
+
+      </div>
+    <div class="modal__windows " id="modalWindows" >
+        <div class="modal__windows__form">
+            <form>
+                <h2>У вас есть вопрос?</h2>
+                <label for="name">
+                    Ваше имя:
+                    <input autocomplete="off" type="name" class="modal__input" name="name">
+                </label>
+                <label for="email">
+                    Ваша почта:*
+                    <input autocomplete="off" type="email" class="modal__input" name="email">
+                </label>
+                <label for="telephone" >
+                    Ваш номер телефона:*
+                    <input autocomplete="off" type="tel" class="modal__input" placeholder="+7 123 4567 09 89" pattern="[0-9][0-9]{3}[0-9]{4}" name="telephone">
+                </label>
+                <label for="age">Возраст:  <input  autocomplete="off"class="modal__input" type="number" max="99" min="10"></label>
+                <label for="ask">Как мы можем помочь Вам?*<input  autocomplete="off"class="modal__input" type="text" name="ask" ></label>
+                <div class="modal__windows__button">
+                    <button class="modal__windows__button-1" type="button"  id="close" onclick="modalClose()" >Закрыть</button>
+                    <button class="modal__windows__button-2"type="button" id="send" onclick="modalSend()" >Отправть</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="main__header">
+        
+        <div class="main__header__top">
+            <img src="./index/image/logo.svg" alt="logo">
+            <a
+            class="main__header__top-logo" 
+            href="./index.html" 
+            title="Переведет на главную страницу">
+            Guide Tokio
+            </a>
+        </div>
+        <div class="main__header__nav">
+            <a href="./catalog.html">Достопримечательности</a>  
+        </div>
+    </div>
+    <div class="burger-menu">
+        <div class="burger-icon" id="burger-icon">
+          &#9776;
+        </div>
+        <nav class="menu" id="menu">
+            <div class="close-icon" id="close-icon">&#10006;</div>
+            <ul>
+            <li><a href="./index.html">Главная</a></li>
+            <li><a href="./contacts.html">Контакты</a></li>
+            <li><a href="./catalog.html">Достопримечательности</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="main__contacts">
+        <div class="main__contacts__title">
+            <h2 class="main__contacts__title-h2">
+            Контакты:
+        </h2>
+        <button class="main__contacts__button" id="modal" onclick="modalShow()">Связаться с нами</button>
+        </div>
+        <div class="main__contacts__block">
+            <div class="main__contacts__block-1">
+                <img src="./contacts/img/addres.svg" width="100" alt="">
+                <div class="main__contacts__block-1-text">
+                    <p>Адрес: </p><a href="https://yandex.ru/maps/org/metro_khattyobori/175284870302/?ll=139.786901%2C35.676214&z=16">
+                    <h2>Префектура Токио, Токийская префектурная дорога 50 <br>
+                        Tokyo Prefecture, Tokyo Prefectural Route 50</h2></a>
+                </div>
+            </div>
+            <div class="main__contacts__block-1">
+                <img src="./contacts/img/watch.svg" width="100" alt="">
+                <div class="main__contacts__block-1-text">
+                    <p>Часы работы:</p>
+                    <h2>С 9:00 до 19:00</h2>
+                </div>
+            </div>
+            <div class="main__contacts__block-1">
+                <img src="./contacts/img/telephone.svg" width="100" alt="">
+                <div class="main__contacts__block-1-text">
+                    <p>Телефон:</p>
+                    <h2>+81 8629-4845 <br>
+                        +7 909-875-32-19 
+                    </h2>
+                </div>
+            </div>
+            <div class="main__contacts__block-1">
+                <img src="./contacts/img/insta.svg" width="100" alt="">
+                <div class="main__contacts__block-1-text">
+                    <p>Instagram:</p>
+                    <a target="_blank" href="https://www.instagram.com/"><h2>tokio_dUIde.Offical</h2></a>
+                </div>
+            </div>
+            <div class="main__contacts__block-1">
+                <img src="./contacts/img/telegram.svg" width="100" alt="">
+                <div class="main__contacts__block-1-text">
+                    <p>Telegram:</p>
+                   <a target="_blank" href="https://web.telegram.org/a/#1125255224"> <h2>@tokio_dUIde</h2></a>
+                </div>
+            </div>
+            <div class="main__contacts__block-1">
+                <img src="./contacts/img/vk.svg" width="100" alt="">
+                <div class="main__contacts__block-1-text">
+                    <p>Вконтаке:</p>
+                    <a target="_blank" href="https://vk.com/page-777107_28406709"><h2>Ссылка на страницу в Вконтаке</h2></a>
+                </div>
+            </div>
+            <div class="main__contacts__block-1">
+                <img src="./contacts/img/whatsap.svg"  width="100" alt="">
+                <div class="main__contacts__block-1-text">
+                    <p>WhatsAp:</p>
+                    <h2>+7 707 85-54</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer__block-1">
+            <h4 >Навигация</h4>
+            <a href="../index/index.html">
+                Главная</a>
+            <a href="../catalog/catalog.html">
+                Достопримечательности</a>
+        </div>
+        <div class="footer__block-2">
+            <h4>Техническая поддержка</h4>
+            <a href="../contacts/contacts.html">Если у вас возникли <br> вопросы или проблемы, <br>мы готовы помочь!</a>
+            <a href="../contacts/contacts.html">Тех-поддержка</a>
+        </div>
+        <div class="footer__block-3">
+            <h4>Политика</h4>
+            <a href="#">Условия использования</a>
+            <a href="#">Конфиденциальность</a>
+            <a href="#">Настройки Cookie</a>
+            <a href="#">Правила</a>
+        </div>
+        <div class="footer__block-4" id="footer__block-4" >
+            <h4>Подписка на рассылку</h4>
+            <form class="footer__block-btn">
+                 <input id="input" type="email" placeholder="Введите почту">
+                 <button type="button"  id="button_sudmit">Подписаться</button>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="./contacts/contacts.js"></script>     
+</html>

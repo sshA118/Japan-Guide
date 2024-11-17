@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./index/image/logo.svg">
+    <link rel="stylesheet" href="./catalog/css/catalog.css">
+    <title>Catalog</title>
+</head>
+<body>
+    <div class="preloader">
+        <h2 class="preloader__text-1" >
+            l
+        </h2>
+        <h2 class="preloader__text-2" >
+            o
+        </h2>
+        <h2 class="preloader__text-3">
+            a
+        </h2>
+        <h2 class="preloader__text-4">
+            d
+        </h2>
+        <h2 class="preloader__text-5">
+            i
+        </h2>
+        <h2 class="preloader__text-6" >
+            n
+        </h2>
+        <h2 class="preloader__text-7">
+            g
+        </h2>
+        <h2 class="preloader__text-8">
+            ...
+        </h2>
+
+      </div>
+    <div class="burger-menu">
+        <div class="burger-icon" id="burger-icon">
+          &#9776;
+        </div>
+        <nav class="menu" id="menu">
+          <div class="close-icon" id="close-icon">&#10006;</div>
+          <ul>
+            <li><a href="./login.html">Главная</a></li>
+            <li><a href="./contacts.html">Контакты</a></li>
+            <li><a href="./catalog.html">Достопримечательности</a></li>
+          </ul>
+        </nav>
+    </div>
+    <div class="main__header">
+        <div class="main__header__top">
+            <img src="./index/image/logo.svg" alt="logo">
+            <a class="main__header__top-logo" href="./index.html">Guide Tokio</a>
+        </div>
+        <div class="main__header__nav">
+            <a href="./contacts.html">Контакты</a>
+        </div>
+    </div>
+    <div class="catalog">
+        <div class="catalog__filter">
+            <div class="catalog__filter-h2">
+                <h2>Каталог</h2>
+                <input type="text" id="search" autocomplete="off" placeholder="Введите название достопри">
+            </div>
+            <div class="catalog__filter-filter" id="filter">
+                <ul>
+                    <li onclick="filterCatalog('parks')">Парки</li>
+                    <li onclick="filterCatalog('museums')">Музеи</li>
+                    <li onclick="filterCatalog('restaurants')">Рестораны</li>
+                    <li onclick="filterCatalog('temples')">Храмы</li>
+                    <li onclick="filterCatalog('malls')">Торговые центры</li>
+                    <li onclick="filterCatalog('markets')">Уличные рынки</li>
+                </ul>
+            </div>
+        </div>
+        <div class="catalog__card">
+            <div class="catalog__card-1"id="close">
+                <div class="catalog__card-1-title" id="card" > 
+                    <h3 id="h0"></h3>
+                    <img  id="img0" alt="hram">
+                    <h4>Адрес:</h4>
+                    <p id="p0"></p>
+                </div>
+                <p id="textP0"></p>
+            </div>
+            <div class="catalog__card-1" id="d"id="close">
+                <div class="catalog__card-1-title"> 
+                    <h3 id="h1"></h3>
+                    <img  id="img1" alt="muzei">
+                    <h4>Адрес:</h4>
+                    <p id="p1"></p>
+                </div>
+                <p id="textP1"></p>
+            </div>
+            <div class="catalog__card-1"id="close">
+                <div class="catalog__card-1-title"> 
+                    <h3 id="h2"></h3>
+                    <img id="img2" alt="muzei">
+                    <h4>Адрес:</h4>
+                    <p id="p2"></p>
+                </div>
+                <p id="textP2"></p>
+            </div>
+            <div class="catalog__card-1"id="close">
+                <div class="catalog__card-1-title"> 
+                    <h3 id="h3"></h3>
+                    <img  id="img3" alt="tower">
+                    <h4>Адрес:</h4>
+                    <p id="p3"></p>
+                </div>
+                <p id="textP3"></p>
+            </div>
+            <div class="catalog__card-1"id="close">
+                <div class="catalog__card-1-title"> 
+                    <h3 id="h4"></h3>
+                    <img  id="img4" alt="muzei">
+                    <h4>Адрес:</h4>
+                    <p id="p4"></p>
+                </div>
+                <p id="textP4"></p>
+            </div>
+            <div class="catalog__card-1" id="show">
+                <div class="catalog__card-1-title"> 
+                    <h3 id="h5"></h3>
+                    <img id="img5" alt="muzei">
+                    <h4>Адрес:</h4>
+                    <p id="p5"></p>
+                </div>
+                <p id="textP5" ></p>
+            </div>
+            <div class="catalog__card-1" id="show">
+                <div class="catalog__card-1-title"> 
+                    <h3 id="h6"></h3>
+                    <img  id="img6" alt="muzei">
+                    <h4>Адрес:</h4>
+                    <p id="p6"></p>
+                </div>
+                <p id="textP6"></p>
+            </div>
+            <div class="catalog__card-1" id="show">
+                <div class="catalog__card-1-title"> 
+                    <h3 id="h7"></h3>
+                    <img  id="img7" alt="rest">
+                    <h4>Адрес:</h4>
+                    <p id="p7"></p>
+                </div>
+                <p id="textP7"></p>
+            </div>
+            <div class="catalog__card-1" id="show">
+                <div class="catalog__card-1-title"> 
+                    <h3 id="h8"></h3>
+                    <img  id="img8" alt="muzei">
+                    <h4>Адрес:</h4>
+                    <p id="p8"></p>
+                </div>
+                <p id="textP8"> </p>
+            </div>
+            <div class="catalog__card-1" id="show">
+                <div class="catalog__card-1-title"> 
+                    <h3 id="h9"></h3>
+                    <img  id="img9" alt="muzei">
+                    <h4>Адрес:</h4>
+                    <p id="p9"></p>
+                </div>
+                <p id="textP9"></p>
+            </div>
+        </div>
+    </div>
+    <div class="pagination">
+        <div class="container">
+            <button id="prev" class="pagination__btn" disabled>🡰</button>
+            <span id="page-numbers" class="pagination"></span>
+            <button id="next" class="pagination__btn">🡺</button>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <div class="footer__block-1">
+            <h4 >Навигация</h4>
+            <a href="../index/index.html">
+                Главная
+            </a>
+            <a href="../contacts/contacts.html">Контакты</a>
+        </div>
+        <div class="footer__block-2">
+            <h4>Техническая поддержка</h4>
+            <a href="../contacts/contacts.html">Если у вас возникли <br> вопросы или проблемы, <br>мы готовы помочь!</a>
+            <a href="../contacts/contacts.html">Тех-поддержка</a>
+        </div>
+        <div class="footer__block-3">
+            <h4>Политика</h4>
+            <a href="#">Условия использования</a>
+            <a href="#">Конфиденциальность</a>
+            <a href="#">Настройки Cookie</a>
+            <a>Правила</a>
+        </div>
+        <div class="footer__block-4" id="footer__block-4" >
+            <h4>Подписка на рассылку</h4>
+            <form class="footer__block-btn">
+                 <input id="input" type="email" placeholder="Введите почту">
+                 <button type="button" id="button_sudmit">Подписаться</button>
+            </form> 
+        </div>
+    </div>
+</body>
+<script src="./catalog/catalog.js"></script>
+<script src="./catalog/cardcatalog.js"></script>
+</html>
