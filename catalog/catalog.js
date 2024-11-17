@@ -1,11 +1,5 @@
 document.addEventListener('DOMContentLoaded',function(){
-    window.onload = function () {
-        document.body.classList.add('loaded_hiding');
-        window.setTimeout(function () {
-          document.body.classList.add('loaded');
-          document.body.classList.remove('loaded_hiding');
-        },500);
-    }
+    
     urlMoc = 'https://672a07666d5fa4901b6f7076.mockapi.io/card/'
     let h3 = document.getElementById('h1')
     let textp = document.getElementById('textP')
@@ -28,6 +22,12 @@ document.addEventListener('DOMContentLoaded',function(){
         }   
     }
     request.send();
+
+
+    document.querySelectorAll('.catalog__card-1').forEach(el =>el.addEventListener('click',()=>{
+        window. open('./card.html');
+        localStorage.setItem('id', el.id);
+    })) 
     
   
     document.getElementById('search').addEventListener('input', function() {
@@ -46,19 +46,7 @@ document.addEventListener('DOMContentLoaded',function(){
 
 
 
-    document.getElementById('burger-icon').addEventListener('click', function() {
-        const menu = document.getElementById('menu');
-        menu.classList.toggle('active');
-      });
-      
-      document.getElementById('close-icon').addEventListener('click', function() {
-        const menu = document.getElementById('menu');
-        menu.classList.remove('active');
-      });
-      
-
-
-
+    
 
       const itemsPerPage = 4;
       const items = document.querySelectorAll('.catalog__card-1');

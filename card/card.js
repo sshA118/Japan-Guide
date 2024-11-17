@@ -1,43 +1,16 @@
 document.addEventListener('DOMContentLoaded',function(){
-    window.onload = function () {
-        document.body.classList.add('loaded_hiding');
-        window.setTimeout(function () {
-          document.body.classList.add('loaded');
-          document.body.classList.remove('loaded_hiding');
-        },500);
-    }
-    document.getElementById('burger-icon').addEventListener('click', function() {
-        const menu = document.getElementById('menu');
-        menu.classList.toggle('active');
-});
-document.getElementById('close-icon').addEventListener('click', function() {
-        const menu = document.getElementById('menu');
-        menu.classList.remove('active');
-});
+    const legal = localStorage.getItem('id')
+    urlMoc = 'https://672a07666d5fa4901b6f7076.mockapi.io/card/'
+    const blockText = document.querySelector('h3')
 
 
-
-
-
-
-
+    let request = new XMLHttpRequest();
+        request.open("GET", urlMoc);
+        request.responseType = "json";
+        request.onload = function() {
+            let jsin = textContent = request.response;
+            blockText.textContent = jsin[legal].title   
+        }
+    request.send();
 
 })
-
-let input = document.getElementById('input')
-function button (){
-    button_sudmit.addEventListener("click",() =>{
-        if(button_sudmit != 0 && input.value != ''){
-            document.getElementById('button_sudmit').innerText = 'Отправлено!';
-            input.value = ''
-        }
-    })
-}
-function buttonrev (){ 
-    if(button_sudmit != 0 && input.value != ''){
-        document.getElementById('button_sudmit').innerText = 'Подписаться';  
-    }
-}
-button()
-setInterval(buttonrev,4000)
-

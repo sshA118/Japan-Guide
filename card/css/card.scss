@@ -253,23 +253,16 @@ a:hover{
 .block{
     display: flex;
     &__img{
-        display: grid;
-        /* Три колонки */
-        grid-template-columns: auto auto auto;
-        /* Два ряда */
-        grid-template-rows: auto auto;
-        /* Автоматическое размещение в ряд */
-        grid-auto-flow: row;
-        /* Отступы между ячейками */
-        gap: 20px;
-        img{
-            max-width: 300px;
-
-        }
-        &__3{
-            grid-column: span 2;
-            
-        }
+        
+       &__1{
+            max-width: 500px;
+       }
+       &__2{
+            max-width: 230px;
+       }
+       &__3{
+            max-width: 230px;
+       }
     }
 
 }
