@@ -30,3 +30,20 @@ window.onload = function () {
       document.body.classList.remove('loaded_hiding');
     },500);
 }
+
+function onEntry(entry) {
+    entry.forEach(change => {
+      if (change.isIntersecting) {
+       change.target.classList.add('manifestation-show');
+      }
+    });
+  }
+const options = {
+    threshold: [0.3] 
+};
+const observer = new IntersectionObserver(onEntry, options);
+const elements = document.querySelectorAll('.manifestation');
+  
+  for (let elm of elements) {
+    observer.observe(elm);
+  }

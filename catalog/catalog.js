@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded',function(){
 
 
     document.querySelectorAll('.catalog__card-1').forEach(el =>el.addEventListener('click',()=>{
-        window. open('./card.html');
+        window.open('./card.html');
         localStorage.setItem('id', el.id);
     })) 
     

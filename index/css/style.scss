@@ -7,18 +7,29 @@
         opacity: 0;
     }
 }
+@keyframes mani {
+	0% {
+		transform: translateY(100px);
+	}
 
-///////////////////////////////////////////////////ШРИФТЫ
+	100% {
+		transform: translateY(0);
+	}
+}
 @font-face {
     font-family:Bad;
-    src: url(../fonts/BadScript-Regular.ttf);
+    src: url(../fonts/SourGummy-VariableFont_wdth\,wght.ttf);
 }
-///////////////////////////////////////ОБЩИЕ НАСТРОЙКИ
+@font-face {
+    font-family:Bad2;
+    src: url(../fonts/ShantellSans-Italic-VariableFont_BNCE\,INFM\,SPAC\,wght.ttf);
+}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Bad;
+    font-family: Bad2;
 }
 a{
     text-decoration: none;
@@ -36,7 +47,14 @@ a:hover{
     color: #e73e58;
     transform: scale(0.98);
 }
-//////////////////////////////////////////КОД
+@keyframes coup {
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(90deg);
+    }
+}
 .preloader {
     position: fixed;
     left: 0;
@@ -210,10 +228,11 @@ a:hover{
       left: 0; 
     }
   }
-
-.container{
-    background-color: #000000;
+body{
+    background-color: #000;
+    
 }
+
 .main{
     background: url(../image/tokio_noch.jpg) no-repeat center center / cover;
     height: 80vh;  
@@ -277,6 +296,7 @@ a:hover{
         }
         &__top{
             padding-left: 20px;
+            display: flex;  
             img{
                 cursor: pointer;
                 @media (max-width:376px) {
@@ -286,6 +306,7 @@ a:hover{
             &-logo{
             font-size: 24px;
             animation: myAnim 0.4s ease 0s 1 reverse both;
+            padding-top: 9px;
             @media (max-width:376px) {
                 font-size: 20px;
             }
@@ -317,6 +338,7 @@ a:hover{
         }
         &-h2{
             animation: myAnim 1s ease 0s 1 reverse both;
+            font-weight: 400;
         }
         &-h3{
             animation: myAnim 1.5s ease 0s 1 reverse both;
@@ -335,9 +357,13 @@ a:hover{
     display: flex;  
     justify-content: space-around;
 }
+
+.slaider__img.manifestation-show{
+    opacity: 1;
+    animation: mani 1s ease-in-out 0s 1 normal forwards;
+}
 .slaider{
-    background-color: #191919;
-    h2{
+    &__h2 {
         color: #fff;
         border-bottom: 1px solid #e73e58;
         font-size: 52px;
@@ -345,103 +371,149 @@ a:hover{
         justify-content: center;
         padding-top: 60px;
         font-weight: 100;
-        @media (max-width:376px) {
+        @media (max-width: 376px) {
             font-size: 25px;
             padding-top: 20px;
         }
     }
-    &__img{
-        margin: 20px 0  100px 0px;
+    &__img {
+        opacity: 0;
+        margin: 20px 0 110px 0;
         width: 100%;
         height: 600px;
         display: flex;
         justify-content: center;
         gap: 35px;
-        @media (max-width:376px) {
+        @media (max-width: 376px) {
             gap: 6px;
             margin: 0;
             height: 200px;
         }
-        img{
-            width: 12%;
+        .card {
+            position: relative;
+            width: 17%;
             height: 100%;
-            object-fit: cover;
-            border-radius: 20px;
-            transition: all ease-in-out 0.5s;
-            -webkit-box-shadow: -1px 2px 30px 10px rgba(59, 59, 59, 0.2);
-            -moz-box-shadow: -1px 2px 30px 10px rgb(243, 51, 51);
-            box-shadow: -1px 2px 30px 10px rgba(195, 21, 21, 0.2);
-            @media (max-width:376px) {
+            perspective: 1000px;
+            @media (max-width: 376px)    {
                 height: 100%;
                 border-radius: 10px;
             }
-        }
-        img:hover{
-            width: 35%;
+            .card__front, .card__back {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                backface-visibility: hidden;
+                transition: transform 0.6s;
+                border-radius: 20px;
+                @media (max-width: 376px) {
+                    border-radius: 10px;
+                }
+            }
+            .card__front {
+                background-color: transparent;
+                z-index: 2;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 20px;
+                    @media (max-width: 376px) {
+                        border-radius: 10px;
+                    }
+                }
+            }
+            .card__back {
+                background-color:#191919;
+                transform: rotateY(180deg);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .slaideer__content {
+                    color: white;
+                    font-size: 15px;
+                    padding: 0 10px 0 10px;
+                    .span__slaider{
+                        font-weight: 900;
+                    }
+                }
+            }
+            &:hover .card__front {
+                transform: rotateY(180deg);
+            }
+            &:hover .card__back {
+                transform: rotateY(0deg);
+            }
         }
     }
 }
 span:hover{  
     cursor: pointer;
 }
-.block{
+.container2.manifestation-show{
+    opacity: 1;
+    animation: mani 1s ease-in-out 0s 1 normal forwards;
+}
+.container2{
     display: flex;
-    margin: 0 100px 0 100px;
-    
-    border-radius: 20px;
-    color: #3A3A3A;
-    max-width: 1500px;
-    padding-bottom: 50px;
-    -webkit-box-shadow: 16px 19px 23px 3px rgba(112, 112, 112, 0.29);
-    -moz-box-shadow: 16px 19px 23px 3px rgba(112, 112, 112, 0.29);
-    box-shadow: 16px 19px 23px 3px rgba(112, 112, 112, 0.29);
-    @media (max-width:376px) {
-        margin: 0;
-        display: block;
-    }
-    &__cart1{
-        margin: 2% 0 5% 30%; 
-        
+    justify-content: space-around;
+    opacity: 0;
+    padding-bottom: 6%;
+    .block{
+        background-color: #191919;
+        display: flex;
+        border-radius: 15px;
+        color: white;
+        max-width: 1500px;
+        padding-bottom: 50px;
         @media (max-width:376px) {
-            margin: 0;   
-            padding: 0;
+            margin: 0;
+            display: block;
         }
-            &__h3{
-                font-size: 35px;
-                margin-right: 10px;
-                font-weight: 900;
+        &__cart1{   
+            margin: 5% 0 8% 43%; 
+            
+            @media (max-width:376px) {
+                margin: 0;   
+                padding: 0;
+            }
+                &__h3{
+                    font-size: 35px;
+                    margin-right: 208px;
+                    font-weight: 900;
+                    border-bottom: 1px solid #e73e58;
+                    @media (max-width:376px) {
+                        margin: 0;
+                        padding-left: 38%;
+                    }
+                }
+            &-ymaps{
+                width:560px;
+                height:445px;
+                padding-left: 50px;
                 @media (max-width:376px) {
-                    margin: 0;
-                    padding-left: 38%;
+                    width: 350px;
+                    height: 300px;
+                    padding: 0 20px 0 35px; 
                 }
             }
-        &-ymaps{
-            width:560px;
-            height:445px;
-            padding-left: 50px;
-            @media (max-width:376px) {
-                width: 350px;
-                height: 300px;
-                padding: 0 20px 0 35px; 
-            }
         }
-    }
-    p{
-        font-size: 30px;
-        padding-top: 120px;
-        padding-left:50px;
-        max-width: 700px;    
-        @media (max-width:376px) {
-            font-size: 15px;
-            padding-top: 0px;
-            max-width: 376px;
-            padding-left: 25px;
-
+        p{
+            font-size: 30px;
+            padding-top: 120px;
+            padding-left:50px;
+            max-width: 700px;    
+            @media (max-width:376px) {
+                font-size: 15px;
+                padding-top: 0px;
+                max-width: 376px;
+                padding-left: 25px;
+    
+            }
         }
     }
 }
 .footer{
-    background-color: #3A3A3A;
+    background-color: #191919;
     color: #fff;
     display: flex;
     justify-content: space-around;
@@ -453,8 +525,7 @@ span:hover{
         display: block;      
         padding-top: 20px;
     }
-    a{
-        padding-left: 10px;
+    a{ 
         cursor: pointer;
         display: flex;
         @media (max-width:376px) {
@@ -463,6 +534,8 @@ span:hover{
     }
     h4{
         font-size: 30px;
+        border-bottom:1px solid #e73e58;
+        width: max-content;
     }
     &__block{
         &-2{
@@ -479,7 +552,7 @@ span:hover{
         &-4{
             input{
                 padding: 20px 70px 20px 20px;
-                border-radius: 20px 0 0 20px;
+                border-radius: 20px 0 0 0px;
                 font-family:Arvo;
                 outline: none;
                 border: none;
@@ -487,10 +560,11 @@ span:hover{
             }
             button{
                 margin-left: -9px;
-                padding: 13px 20px 14px 20px;
-                border-radius: 0 20px 20px 0;
-                background-color:#FF8F0B;
+                padding: 17.1px 116px 19px 20px;
+                border-radius: 0 0px 16px 0px;
+                background-color:#e73e58;
                 border: none;
+                color: #fff;
                 transition: 0.4s ease-in-out;
                 width: 102px;
                 font-size: 15px;
@@ -498,7 +572,6 @@ span:hover{
             }
             button:hover{
                 background-color: #000000;
-                color: #fff;
                 cursor: pointer;
             }
         }

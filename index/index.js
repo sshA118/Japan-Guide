@@ -45,9 +45,7 @@ ymaps.ready(function () {
     let myPlacemark = new ymaps.Placemark([35.688366, 139.753915], {
        content: 'Токио',
     });
-    let myPlacemarkk = new ymaps.Placemark([35.526344, 140.086820], {
-        content: 'Токио',
-     });
+
     Map.geoObjects.add(myPlacemark);
 });
 function pustto(){

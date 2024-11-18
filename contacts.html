@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./index/image/logo.svg" />
+    <link rel="shortcut icon" href="./index/image/logo2.svg" />
+    <link rel="stylesheet" href="./index/css/style.css">
     <link rel="stylesheet" href="./contacts/css/contacts.css">
     <title>Контакты</title>
 </head>
@@ -41,18 +42,18 @@
                 <h2>У вас есть вопрос?</h2>
                 <label for="name">
                     Ваше имя:
-                    <input autocomplete="off" type="name" class="modal__input" name="name">
+                    <input autocomplete="off" placeholder="Иван" type="name" class="modal__input" name="name">
                 </label>
                 <label for="email">
                     Ваша почта:*
-                    <input autocomplete="off" type="email" class="modal__input" name="email">
+                    <input autocomplete="off" type="email" placeholder="test@mail.ru" class="modal__input" name="email">
                 </label>
                 <label for="telephone" >
                     Ваш номер телефона:*
-                    <input autocomplete="off" type="tel" class="modal__input" placeholder="+7 123 4567 09 89" pattern="[0-9][0-9]{3}[0-9]{4}" name="telephone">
+                    <input autocomplete="off" type="tel" class="modal__input" placeholder="+7 123 456 09 89" maxlength="16" name="telephone">
                 </label>
-                <label for="age">Возраст:  <input  autocomplete="off"class="modal__input" type="number" max="99" min="10"></label>
-                <label for="ask">Как мы можем помочь Вам?*<input  autocomplete="off"class="modal__input" type="text" name="ask" ></label>
+                <label for="ask">Как мы можем помочь Вам?*</label>
+                <textarea id="ask" class="modal__input__ask" name="ask" placeholder="Введите ваш вопрос"></textarea>
                 <div class="modal__windows__button">
                     <button class="modal__windows__button-1" type="button"  id="close" onclick="modalClose()" >Закрыть</button>
                     <button class="modal__windows__button-2"type="button" id="send" onclick="modalSend()" >Отправть</button>
@@ -63,7 +64,7 @@
     <div class="main__header">
         
         <div class="main__header__top">
-            <img src="./index/image/logo.svg" alt="logo">
+            <img src="./index/image/logo2.svg" alt="logo">
             <a
             class="main__header__top-logo" 
             href="./index.html" 
