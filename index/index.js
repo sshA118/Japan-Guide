@@ -1,5 +1,3 @@
-
-/////////////////////////////////////////////////////SLAIDER
 let url2 = ['0',
             './index/image/jij.png',
             './index/image/Rainbow.jpg',
@@ -21,9 +19,8 @@ btn.addEventListener("click",() =>{
             while (i < 1){
                 math = Math.floor((Math.random() * 7) + 1);
                 i++;
-                main.style.background = `url(${url2[math]})no-repeat center center / cover`      
-                console.log('levo');
-                console.log(url2[math]);
+                main.style.background = `url(${url2[math]})no-repeat center center / cover` 
+
 }
         }
     })  
@@ -33,21 +30,13 @@ btn1.addEventListener("click",() =>{
             while (i < 1){
                 math = Math.floor((Math.random() * 5) + 1);
                 i++;
-                console.log(math);
                 main.style.background = `url(${url2[math]})no-repeat center center / cover`
-                console.log('pravo');
-                console.log(url2[math]); 
 
             }
         }
     })  
 }
 per()
-
-
-///////////////////////////////////////////КНОПКА /ПОДПИСАТЬСЯ///////////////////////////////////////////
-
-
 ymaps.ready(function () { 
     let Map = new ymaps.Map("YMapsID", {
         center: [35.688366, 139.753915],
