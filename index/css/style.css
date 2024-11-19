@@ -222,7 +222,7 @@ a:hover {
 }
 
 body {
-  background-color: #000;
+  background-color: #191919;
 }
 
 .main {
@@ -282,7 +282,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  background-color: #191919;
+  background-color: #222222;
   padding: 0 20px 0 0;
   border-bottom: 2px solid #e73e58;
 }
@@ -440,7 +440,7 @@ body {
   }
 }
 .slaider__img .card .card__back {
-  background-color: #191919;
+  background-color: #222222;
   transform: rotateY(180deg);
   display: flex;
   align-items: center;
@@ -477,7 +477,7 @@ span:hover {
   padding-bottom: 6%;
 }
 .container2 .block {
-  background-color: #191919;
+  background-color: #222222;
   display: flex;
   border-radius: 15px;
   color: white;
@@ -539,7 +539,7 @@ span:hover {
 }
 
 .footer {
-  background-color: #191919;
+  background-color: #222222;
   color: #fff;
   display: flex;
   justify-content: space-around;

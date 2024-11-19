@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded',function(){
 
     
 
-      const itemsPerPage = 4;
+      const itemsPerPage = 6;
       const items = document.querySelectorAll('.catalog__card-1');
       const totalPages = Math.ceil(items.length / itemsPerPage);
       let currentPage = 1;
@@ -102,35 +102,24 @@ document.addEventListener('DOMContentLoaded',function(){
 })
 
 
-
-
-
-
-
-const iten = [
-    { title: 'Храм Мэйдзи (Мэйдзи Дзингу)', category: 'temples', content: '...' },
-    { title: 'Токийский национальный музей', category: 'museums', content: '...' },
-    { title: 'Mori Art Museum(Музей)', category: 'museums', content: '...' },
-    { title: 'Ginza Six(Торговые центры)', category: 'malls', content: '...' },
-    { title: 'Tokyo Midtown(Торговые центры)', category: 'malls', content: '...' },
-    { title: 'Ameyoko Shopping Street(Уличные рынки)', category: 'markets', content: '...' },
-    { title: 'Gotokuji Temple(Уличные рынки)', category: 'markets', content: '...' },
-    { title: 'Национальный парк Никко, Тотиги/Гумма/Фукусима', category: 'parks', content: '...' },
-    { title: 'Misono(Ресторан)', category: 'restaurants', content: '...' },
-    { title: 'NewYork Grill(Ресторан)', category: 'restaurants', content: '...' },
-];
-
-function filterCatalog(category) {
-    const catalogCards = document.querySelectorAll('.catalog__card-1');
-    catalogCards.forEach(card => {
-        const title = card.querySelector('h3').innerText;
-        const item = iten.find(item => item.title === title);
-        if (item && item.category === category) {
-            card.style.display = 'flex';
-        } else {
-            card.style.display = 'none';
-        }
+//фильтрация по названию достропримечательности
+const catalog = document.querySelector('.catalog');
+const buttons = document.querySelectorAll('button[data-category]');
+    buttons.forEach(button => {
+        button.addEventListener('click', () => {
+            const category = button.dataset.category;
+            filterCatalog(category);
+        });
     });
-    }   
-
+    function filterCatalog(category) {
+        const cards = catalog.querySelectorAll('.catalog__card-1');
+        cards.forEach(card => {
+            if (category === 'all' || card.dataset.category === category) {
+                card.style.display = 'flex';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
     
+

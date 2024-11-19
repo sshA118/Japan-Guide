@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', function() {
 let url2 = ['0',
             './index/image/jij.png',
             './index/image/Rainbow.jpg',
@@ -20,7 +21,6 @@ btn.addEventListener("click",() =>{
                 math = Math.floor((Math.random() * 7) + 1);
                 i++;
                 main.style.background = `url(${url2[math]})no-repeat center center / cover` 
-
 }
         }
     })  
@@ -31,7 +31,6 @@ btn1.addEventListener("click",() =>{
                 math = Math.floor((Math.random() * 5) + 1);
                 i++;
                 main.style.background = `url(${url2[math]})no-repeat center center / cover`
-
             }
         }
     })  
@@ -45,9 +44,6 @@ ymaps.ready(function () {
     let myPlacemark = new ymaps.Placemark([35.688366, 139.753915], {
        content: 'Токио',
     });
-
     Map.geoObjects.add(myPlacemark);
 });
-function pustto(){
-    
-}
+});
