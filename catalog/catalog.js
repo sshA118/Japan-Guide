@@ -1,20 +1,15 @@
 document.addEventListener('DOMContentLoaded',function(){
-    
     urlMoc = 'https://672a07666d5fa4901b6f7076.mockapi.io/card/'
-    let h3 = document.getElementById('h1')
-    let textp = document.getElementById('textP')
-    let img = document.getElementById('img')
-    let p = document.getElementById(`p`)
     let request = new XMLHttpRequest();
     request.open("GET", urlMoc);
     request.responseType = "json";
     request.onload = function() {
         let jsin = textContent = request.response;
         for(let j = 0;j < 10;j++){
-            h3 = document.getElementById(`h${j}`)
-            textp = document.getElementById(`textP${j}`)
-            img  = document.getElementById(`img${j}`)
-            p = document.getElementById(`p${j}`)
+            const h3 = document.getElementById(`h${j}`)
+            const textp = document.getElementById(`textP${j}`)
+            const img  = document.getElementById(`img${j}`)
+            const p = document.getElementById(`p${j}`)
             img.src = jsin[j].img
             h3.innerText = jsin[j].title
             textp.innerHTML = jsin[j].text
@@ -22,8 +17,7 @@ document.addEventListener('DOMContentLoaded',function(){
         }   
     }
     request.send();
-
-
+    
     document.querySelectorAll('.catalog__card-1').forEach(el =>el.addEventListener('click',()=>{
         window.open('./card.html');
         localStorage.setItem('id', el.id);
@@ -33,7 +27,6 @@ document.addEventListener('DOMContentLoaded',function(){
     document.getElementById('search').addEventListener('input', function() {
         const searchTerm = this.value.toLowerCase();
         const cards = document.querySelectorAll('.catalog__card-1');
-        
         cards.forEach(card => {
             const title = card.querySelector('h3').textContent.toLowerCase();
             if (title.includes(searchTerm)) {
@@ -104,22 +97,25 @@ document.addEventListener('DOMContentLoaded',function(){
 
 //фильтрация по названию достропримечательности
 const catalog = document.querySelector('.catalog');
-const buttons = document.querySelectorAll('button[data-category]');
-    buttons.forEach(button => {
-        button.addEventListener('click', () => {
-            const category = button.dataset.category;
-            filterCatalog(category);
-        });
+const filterItems = document.querySelectorAll('#filter');
+const resetFilters= document.querySelector('#reset-filters');
+filterItems.forEach(item => {
+    item.addEventListener('click', () => {
+        const category = item.getAttribute('onclick').match(/'([^']+)'/)[1];
+        filterCatalog(category);
     });
-    function filterCatalog(category) {
-        const cards = catalog.querySelectorAll('.catalog__card-1');
-        cards.forEach(card => {
-            if (category === 'all' || card.dataset.category === category) {
-                card.style.display = 'flex';
-            } else {
-                card.style.display = 'none';
-            }
-        });
-    }
-    
+});
 
+function filterCatalog(category) {
+    const cards = catalog.querySelectorAll('.catalog__card-1');
+    cards.forEach(card => {
+        if (category === 'all' || card.dataset.category === category) {
+            card.style.display = 'flex';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
+resetFilters.addEventListener('click', () => {
+    filterCatalog('all');
+});

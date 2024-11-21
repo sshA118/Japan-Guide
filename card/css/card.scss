@@ -1,32 +1,25 @@
-.block{
+.block {
     margin-top: 2%;
-    &__img{
+
+    &__img {
         display: flex;
         justify-content: space-evenly;
-        @media (max-width:376px) {
+
+        @media (max-width: 376px) {
             overflow-x: scroll;
-    }
-       &__1{
+            gap: 10px;
+            scroll-snap-type: x mandatory;
+        }
+
+        &__1, &__2, &__3 {
             width: 600px;
             border-radius: 10px;
-            @media (max-width:376px){  
+            scroll-snap-align: start;
+
+            @media (max-width: 376px) {
                 width: 375px;
             }
-       }
-       &__2{
-            width: 600px;
-            border-radius: 10px;
-            @media (max-width:376px){  
-                width: 375px;
-            }
-       }
-       &__3{
-            width: 600px;
-            border-radius: 10px;
-            @media (max-width:376px){  
-                width: 375px;
-            }
-       }
+        }
     }
     &__text{
         &__text{
@@ -65,6 +58,9 @@
     margin-left: 3%;
     margin-right: 3%;   
     height: 500px;
-    max-width: 2000px;
+    max-width: 100%;
     margin-top: 3%;
+    @media (max-width:376px){  
+        height:200px;
+    }
 }

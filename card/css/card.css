@@ -8,32 +8,17 @@
 @media (max-width: 376px) {
   .block__img {
     overflow-x: scroll;
+    gap: 10px;
+    scroll-snap-type: x mandatory;
   }
 }
-.block__img__1 {
+.block__img__1, .block__img__2, .block__img__3 {
   width: 600px;
   border-radius: 10px;
+  scroll-snap-align: start;
 }
 @media (max-width: 376px) {
-  .block__img__1 {
-    width: 375px;
-  }
-}
-.block__img__2 {
-  width: 600px;
-  border-radius: 10px;
-}
-@media (max-width: 376px) {
-  .block__img__2 {
-    width: 375px;
-  }
-}
-.block__img__3 {
-  width: 600px;
-  border-radius: 10px;
-}
-@media (max-width: 376px) {
-  .block__img__3 {
+  .block__img__1, .block__img__2, .block__img__3 {
     width: 375px;
   }
 }
@@ -76,6 +61,11 @@
   margin-left: 3%;
   margin-right: 3%;
   height: 500px;
-  max-width: 2000px;
+  max-width: 100%;
   margin-top: 3%;
+}
+@media (max-width: 376px) {
+  .block__ymaps {
+    height: 200px;
+  }
 }/*# sourceMappingURL=card.css.map */

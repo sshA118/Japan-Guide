@@ -34,6 +34,7 @@
 @media (max-width: 376px) {
   .modal__windows__form {
     width: 95%;
+    height: 75%;
   }
 }
 .modal__windows__form :active, .modal__windows__form :hover, .modal__windows__form :focus {
@@ -98,6 +99,11 @@
   background-color: #191919;
   justify-content: space-between;
 }
+@media (max-width: 376px) {
+  .main__contacts__title {
+    flex-direction: column;
+  }
+}
 .main__contacts__title-h2 {
   color: #fff;
   font-size: 40px;
@@ -108,7 +114,8 @@
 @media (max-width: 376px) {
   .main__contacts__title-h2 {
     font-size: 20px;
-    padding-left: 0;
+    padding-left: 6%;
+    padding-top: 0;
   }
 }
 .main__contacts__button {
@@ -124,6 +131,11 @@
 }
 .main__contacts__button:hover {
   cursor: pointer;
+}
+@media (max-width: 376px) {
+  .main__contacts__button {
+    margin-left: 13%;
+  }
 }
 .main__contacts__block {
   display: flex;

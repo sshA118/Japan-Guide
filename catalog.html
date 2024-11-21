@@ -62,16 +62,17 @@
         <div class="catalog__filter">
             <div class="catalog__filter-h2">
                 <h2>Каталог</h2>
-                <input type="text" id="search" autocomplete="off" placeholder="Введите название достопри">
+                <input type="text" id="search" autocomplete="off" placeholder="Введите название достопримечательности">
             </div>
             <div class="catalog__filter-filter" id="filter">
                 <ul>
-                    <li onclick="filterCatalog('parks')">Парки</li>
-                    <li onclick="filterCatalog('museums')">Музеи</li>
-                    <li onclick="filterCatalog('restaurants')">Рестораны</li>
-                    <li onclick="filterCatalog('temples')">Храмы</li>
-                    <li onclick="filterCatalog('malls')">Торговые центры</li>
-                    <li onclick="filterCatalog('markets')">Уличные рынки</li>
+                    <li onclick="filterCatalog('parks')" class="li__style" >Парки</li>
+                    <li onclick="filterCatalog('museums')" class="li__style">Музеи</li>
+                    <li onclick="filterCatalog('restaurants')" class="li__style">Рестораны</li>
+                    <li onclick="filterCatalog('temples')" class="li__style">Храмы</li>
+                    <li onclick="filterCatalog('malls')" class="li__style">Торговые центры</li>
+                    <li onclick="filterCatalog('markets')" class="li__style">Уличные рынки</li>
+                    <li onclick="filterCatalog('exit')" id="reset-filters" class="li__exit">Снять фильтры</li>
                 </ul>
             </div>
         </div>
