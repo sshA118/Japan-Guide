@@ -30,6 +30,13 @@ document.addEventListener('DOMContentLoaded', function() {
     };
     request.send();
 });
+let text_p = document.getElementById('text__P').onclick = textPshow;
+let text_block = document.querySelector('.block__text__text')
+function textPshow(){
+      
+}
+
+
 
 function initMap() {
     let map = localStorage.getItem('map');
@@ -45,5 +52,3 @@ function initMap() {
         Map.geoObjects.add(myPlacemark);
     });
 }
-
-// cy.get(".track__desc").should("have length", 1)

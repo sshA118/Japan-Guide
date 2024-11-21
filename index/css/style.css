@@ -109,6 +109,7 @@ a:hover {
 .preloader__text {
   position: relative;
   display: flex;
+  justify-content: center;
 }
 .preloader__text-1 {
   position: relative;
@@ -219,10 +220,15 @@ a:hover {
 }
 .burger-menu .menu.active {
   left: 0;
+  height: 100%;
 }
 
 body {
   background-color: #191919;
+}
+
+.tab_arrow {
+  max-width: 20px;
 }
 
 .main {
@@ -231,7 +237,7 @@ body {
 }
 @media (max-width: 376px) {
   .main {
-    height: 80vh;
+    height: 50vh;
   }
 }
 .main__arrow {
@@ -244,7 +250,7 @@ body {
 @media (max-width: 376px) {
   .main__arrow {
     margin-top: 0;
-    font-size: 10px;
+    font-size: 15px;
   }
 }
 .main__arrow p {
@@ -367,6 +373,12 @@ body {
   animation: mani 1s ease-in-out 0s 1 normal forwards;
 }
 
+@media (max-width: 376px) {
+  .slaider {
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }
+}
 .slaider__h2 {
   color: #fff;
   border-bottom: 1px solid #e73e58;
@@ -380,6 +392,7 @@ body {
   .slaider__h2 {
     font-size: 25px;
     padding-top: 20px;
+    margin-bottom: 12px;
   }
 }
 .slaider__img {
@@ -393,24 +406,25 @@ body {
 }
 @media (max-width: 376px) {
   .slaider__img {
-    gap: 6px;
     margin: 0;
-    height: 200px;
+    height: 400px;
+    width: 1200px;
+    margin-bottom: 12px;
   }
 }
-.slaider__img .card {
+.slaider .card {
   position: relative;
   width: 17%;
   height: 100%;
   perspective: 1000px;
 }
 @media (max-width: 376px) {
-  .slaider__img .card {
+  .slaider .card {
     height: 100%;
     border-radius: 10px;
   }
 }
-.slaider__img .card .card__front, .slaider__img .card .card__back {
+.slaider .card .card__front, .slaider .card .card__back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -419,15 +433,15 @@ body {
   border-radius: 20px;
 }
 @media (max-width: 376px) {
-  .slaider__img .card .card__front, .slaider__img .card .card__back {
+  .slaider .card .card__front, .slaider .card .card__back {
     border-radius: 10px;
   }
 }
-.slaider__img .card .card__front {
+.slaider .card .card__front {
   background-color: transparent;
   z-index: 2;
 }
-.slaider__img .card .card__front img {
+.slaider .card .card__front img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -435,29 +449,34 @@ body {
   border-radius: 20px;
 }
 @media (max-width: 376px) {
-  .slaider__img .card .card__front img {
+  .slaider .card .card__front img {
     border-radius: 10px;
   }
 }
-.slaider__img .card .card__back {
+.slaider .card .card__back {
   background-color: #222222;
   transform: rotateY(180deg);
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.slaider__img .card .card__back .slaideer__content {
+.slaider .card .card__back .slaideer__content {
   color: white;
   font-size: 15px;
   padding: 0 10px 0 10px;
 }
-.slaider__img .card .card__back .slaideer__content .span__slaider {
+@media (max-width: 376px) {
+  .slaider .card .card__back .slaideer__content {
+    font-size: 11px;
+  }
+}
+.slaider .card .card__back .slaideer__content .span__slaider {
   font-weight: 900;
 }
-.slaider__img .card:hover .card__front {
+.slaider .card:hover .card__front {
   transform: rotateY(180deg);
 }
-.slaider__img .card:hover .card__back {
+.slaider .card:hover .card__back {
   transform: rotateY(0deg);
 }
 
@@ -488,6 +507,8 @@ span:hover {
   .container2 .block {
     margin: 0;
     display: block;
+    border-radius: 0;
+    padding-bottom: 20px;
   }
 }
 .container2 .block__cart1 {
@@ -509,6 +530,7 @@ span:hover {
   .container2 .block__cart1__h3 {
     margin: 0;
     padding-left: 38%;
+    margin-bottom: 12px;
   }
 }
 .container2 .block__cart1-ymaps {
@@ -532,7 +554,7 @@ span:hover {
 @media (max-width: 376px) {
   .container2 .block p {
     font-size: 15px;
-    padding-top: 0px;
+    padding-top: 12px;
     max-width: 376px;
     padding-left: 25px;
   }
@@ -570,6 +592,12 @@ span:hover {
   width: -moz-max-content;
   width: max-content;
 }
+@media (max-width: 376px) {
+  .footer h4 {
+    font-size: 20px;
+    margin-left: 5px;
+  }
+}
 .footer__block-2 {
   display: flex;
   flex-direction: column;
@@ -589,6 +617,11 @@ span:hover {
   border: none;
   margin-top: 20px;
 }
+@media (max-width: 376px) {
+  .footer__block-4 input {
+    padding: 15px 50px 15px 15px;
+  }
+}
 .footer__block-4 button {
   margin-left: -9px;
   padding: 17.1px 116px 19px 20px;
@@ -600,6 +633,13 @@ span:hover {
   width: 102px;
   font-size: 15px;
   font-weight: 900;
+}
+@media (max-width: 376px) {
+  .footer__block-4 button {
+    padding: 14.5px 100px 15px 20px;
+    font-size: 12px;
+    margin-bottom: 30px;
+  }
 }
 .footer__block-4 button:hover {
   background-color: #000000;
