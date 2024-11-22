@@ -1,18 +1,19 @@
 document.addEventListener('DOMContentLoaded', function() {
 let modal  = document.getElementById('modal')
 let form = document.getElementById('modalWindows')
+const input_value = document.querySelectorAll('.input_value')
+let modalError = document.getElementById('.error')
 modal.onclick = function(){
       form.style.display ='flex'
   }
-
-let closeModal = document.getElementById('close')
+const closeModal = document.getElementById('close')
 closeModal.onclick = function(){
-    form.style.display ='none'
-    
-}
+  form.style.display ='none'
+}  
 let send = document.getElementById('send')
 send.onclick = function(){
   form.style.display ='none'
+  
 }
 
 ymaps.ready(function () { 

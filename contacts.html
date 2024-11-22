@@ -42,18 +42,31 @@
                 <h2>У вас есть вопрос?</h2>
                 <label for="name">
                     Ваше имя:
-                    <input autocomplete="off" placeholder="Иван" type="name" class="modal__input" name="name">
+                    <input autocomplete="off" placeholder="Иван" type="name"  class="modal__input input_value" name="name">
                 </label>
                 <label for="email">
                     Ваша почта:*
-                    <input autocomplete="off" type="email" placeholder="test@mail.ru" class="modal__input" name="email">
+                    <input autocomplete="off" type="email" placeholder="test@mail.ru" class="modal__input input_value" name="email">
                 </label>
-                <label for="telephone" >
+                <label for="telephone">
                     Ваш номер телефона:*
-                    <input autocomplete="off" type="tel" class="modal__input" placeholder="+7 123 456 09 89" maxlength="16" name="telephone">
+                    <input 
+                        autocomplete="off"
+                        type="tel" 
+                        class="modal__input input_value" 
+                        pattern="\+7\s?[\(]{0,1}[0-9]{3}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" 
+                        title="Формат: +7 (XXX) XXX-XX-XX" 
+                        required
+                        maxlength="16"
+                        name="telephone"
+                        placeholder="+7 XXX XXX-XX-XX"
+                    >
                 </label>
                 <label for="ask">Как мы можем помочь Вам?*</label>
-                <textarea id="ask" class="modal__input__ask" name="ask" placeholder="Введите ваш вопрос"></textarea>
+                <textarea id="ask" 
+                class="modal__input__ask" 
+                name="ask" 
+                placeholder="Введите ваш вопрос"></textarea>
                 <div class="modal__windows__button">
                     <button class="modal__windows__button-1" type="button"  id="close" onclick="modalClose()" >Закрыть</button>
                     <button class="modal__windows__button-2"type="button" id="send" onclick="modalSend()" >Отправть</button>

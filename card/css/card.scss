@@ -22,21 +22,10 @@
         }
     }
     &__text{
-        &__text{
-            @media (max-width:376px){  
-                // height:300px;
-                overflow: hidden;
-            }
-        }
         &-p{
             font-size: 20px;
             @media (max-width:376px){  
                 font-size: 15px;
-                // display: -webkit-box;
-                -webkit-line-clamp: 15;
-                -webkit-box-orient: vertical;
-                overflow: hidden;
-                text-overflow: ellipsis;
             }
         }
         color: white;

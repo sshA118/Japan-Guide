@@ -28,21 +28,12 @@
   margin-right: 2%;
   text-align: center;
 }
-@media (max-width: 376px) {
-  .block__text__text {
-    overflow: hidden;
-  }
-}
 .block__text-p {
   font-size: 20px;
 }
 @media (max-width: 376px) {
   .block__text-p {
     font-size: 15px;
-    -webkit-line-clamp: 15;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
   }
 }
 @media (max-width: 376px) {

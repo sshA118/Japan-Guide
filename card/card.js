@@ -16,8 +16,6 @@ document.addEventListener('DOMContentLoaded', function() {
             img1.src= jsin[legal].image1
             img2.src = jsin[legal].image2
             img3.src = jsin[legal].image3
-            
-            
             pText.textContent = jsin[legal].detail
             localStorage.setItem('map', jsin[legal].maps);
             initMap();
@@ -26,15 +24,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     };
     request.onerror = function() {
-        console.error('Ошибка запроса');
+        console.error('Ошибка');
     };
     request.send();
 });
-let text_p = document.getElementById('text__P').onclick = textPshow;
-let text_block = document.querySelector('.block__text__text')
-function textPshow(){
-      
-}
 
 
 
