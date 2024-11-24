@@ -18,7 +18,7 @@ btn.addEventListener("click",() =>{
         if(btn = 1){    
             let i = 0;
             while (i < 1){
-                math = Math.floor((Math.random() * 7) + 1);
+                math = Math.floor((Math.random() * 8) + 1);
                 i++;
                 main.style.background = `url(${url2[math]})no-repeat center center / cover` 
 }
@@ -28,7 +28,7 @@ btn1.addEventListener("click",() =>{
         if(btn1 = 1){
             let i = 0;
             while (i < 1){
-                math = Math.floor((Math.random() * 5) + 1);
+                math = Math.floor((Math.random() * 8) + 1);
                 i++;
                 main.style.background = `url(${url2[math]})no-repeat center center / cover`
             }
