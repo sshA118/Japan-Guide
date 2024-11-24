@@ -2,7 +2,7 @@
   display: flex;
   padding: 0 10% 0 10%;
 }
-@media (max-width: 376px) {
+@media (max-width: 436px) {
   .catalog {
     flex-direction: column;
   }
@@ -18,7 +18,7 @@
   display: flex;
   margin-top: 50px;
 }
-@media (max-width: 376px) {
+@media (max-width: 436px) {
   .catalog__filter-h2 {
     margin: 0;
   }
@@ -35,7 +35,7 @@
   width: 264px;
   color: #fff;
 }
-@media (max-width: 376px) {
+@media (max-width: 436px) {
   .catalog__filter-h2 input {
     margin-left: -70px;
     margin-bottom: 20px;
@@ -47,7 +47,7 @@
 .catalog__filter-h2 input::placeholder {
   color: #fff;
 }
-@media (max-width: 376px) {
+@media (max-width: 436px) {
   .catalog__filter-h2 input::-moz-placeholder {
     font-size: 15px;
   }
@@ -60,7 +60,7 @@
   margin-left: 40px;
   color: #fff;
 }
-@media (max-width: 376px) {
+@media (max-width: 436px) {
   .catalog__filter-h2 h2 {
     font-size: 20px;
     margin-left: -6%;
@@ -115,6 +115,13 @@
   flex-wrap: wrap;
   gap: 20px;
 }
+@media (max-width: 436px) {
+  .catalog__card {
+    margin-top: 20px;
+    display: block;
+    width: 343px;
+  }
+}
 @media (max-width: 376px) {
   .catalog__card {
     margin-top: 20px;
@@ -128,9 +135,15 @@
   border-radius: 13px;
   background-color: #222222;
 }
+@media (max-width: 436px) {
+  .catalog__card-1 {
+    display: block;
+  }
+}
 @media (max-width: 376px) {
   .catalog__card-1 {
     display: block;
+    max-width: 299px;
   }
 }
 .catalog__card-1 h3 {
@@ -142,6 +155,11 @@
   width: 384px;
   height: 211px;
   border-radius: 20px;
+}
+@media (max-width: 436px) {
+  .catalog__card-1 img {
+    max-width: 323px;
+  }
 }
 @media (max-width: 376px) {
   .catalog__card-1 img {

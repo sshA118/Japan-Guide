@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     let legal = localStorage.getItem('id');
-    let urlMoc = 'https://672a07666d5fa4901b6f7076.mockapi.io/card/';
+    let urlMoc = `https://672a07666d5fa4901b6f7076.mockapi.io/card/?`;
     let blockText = document.querySelector('h3');
     let request = new XMLHttpRequest();
     let img1 = document.querySelector('.block__img__1')
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
         console.error('Ошибка');
     };
     request.send();
-});
+}); 
 
 
 

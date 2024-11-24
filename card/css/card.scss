@@ -1,21 +1,38 @@
 .block {
     margin-top: 2%;
-
     &__img {
         display: flex;
         justify-content: space-evenly;
-
+        @media (max-width: 1025px) {
+            overflow-x: scroll;
+            gap: 10px;
+            scroll-snap-type: x mandatory;
+        }   
+        @media (max-width: 426px) {
+            overflow-x: scroll;
+            gap: 10px;
+            scroll-snap-type: x mandatory;
+        }
         @media (max-width: 376px) {
             overflow-x: scroll;
             gap: 10px;
             scroll-snap-type: x mandatory;
         }
-
         &__1, &__2, &__3 {
             width: 600px;
             border-radius: 10px;
             scroll-snap-align: start;
-
+            @media (max-width:1440px) {
+                width: 400px;
+                
+            }
+            @media (max-width:1025px) {
+                width: 768px;
+                scroll-snap-align: center;
+            }
+            @media (max-width:436px) {
+                width: 425px;
+            }
             @media (max-width: 376px) {
                 width: 375px;
             }
@@ -24,6 +41,9 @@
     &__text{
         &-p{
             font-size: 20px;
+            @media (max-width:426px){  
+                font-size: 13px;
+            }
             @media (max-width:376px){  
                 font-size: 15px;
             }
@@ -32,6 +52,9 @@
         margin-left: 2%;
         margin-right: 2%;
         text-align: center;
+        @media (max-width:426px){  
+            text-overflow: clip;
+        }
         @media (max-width:376px){  
             text-overflow: clip;
         }
@@ -49,6 +72,9 @@
     height: 500px;
     max-width: 100%;
     margin-top: 3%;
+    @media (max-width:426px){  
+        height:200px;
+    }
     @media (max-width:376px){  
         height:200px;
     }

@@ -176,9 +176,8 @@ a:hover {
   position: relative;
   z-index: 2222;
   display: none;
-  background: rgba(0, 0, 0, 0.2);
 }
-@media (max-width: 376px) {
+@media (max-width: 426px) {
   .burger-menu {
     display: block;
   }
@@ -235,7 +234,7 @@ body {
   background: url(../image/tokio_noch.jpg) no-repeat center center/cover;
   height: 80vh;
 }
-@media (max-width: 376px) {
+@media (max-width: 436px) {
   .main {
     height: 50vh;
   }
@@ -247,7 +246,7 @@ body {
   color: #fff;
   margin-top: 100px;
 }
-@media (max-width: 376px) {
+@media (max-width: 436px) {
   .main__arrow {
     margin-top: 0;
     font-size: 15px;
@@ -292,7 +291,7 @@ body {
   padding: 0 20px 0 0;
   border-bottom: 2px solid #e73e58;
 }
-@media (max-width: 376px) {
+@media (max-width: 436px) {
   .main__header {
     display: none;
   }
@@ -304,7 +303,7 @@ body {
 .main__header__top img {
   cursor: pointer;
 }
-@media (max-width: 376px) {
+@media (max-width: 436px) {
   .main__header__top img {
     max-width: 20px;
   }
@@ -314,7 +313,7 @@ body {
   animation: myAnim 0.4s ease 0s 1 reverse both;
   padding-top: 9px;
 }
-@media (max-width: 376px) {
+@media (max-width: 436px) {
   .main__header__top-logo {
     font-size: 20px;
   }
@@ -326,7 +325,7 @@ body {
   animation: myAnim 0.4s ease 0s 1 reverse both;
   margin-right: 10px;
 }
-@media (max-width: 376px) {
+@media (max-width: 436px) {
   .main__header__nav {
     font-size: 12px;
     gap: 26px;
@@ -340,7 +339,7 @@ body {
   font-size: 36px;
   font-weight: 700;
 }
-@media (max-width: 376px) {
+@media (max-width: 436px) {
   .main__title {
     font-size: 15px;
   }
@@ -357,7 +356,7 @@ body {
   cursor: pointer;
   animation: myAnim 2s ease 0s 1 reverse both;
 }
-@media (max-width: 376px) {
+@media (max-width: 436px) {
   .main__title-img {
     max-width: 20px;
   }
@@ -373,7 +372,7 @@ body {
   animation: mani 1s ease-in-out 0s 1 normal forwards;
 }
 
-@media (max-width: 376px) {
+@media (max-width: 436px) {
   .slaider {
     overflow-x: scroll;
     overflow-y: hidden;
@@ -388,7 +387,7 @@ body {
   padding-top: 60px;
   font-weight: 100;
 }
-@media (max-width: 376px) {
+@media (max-width: 436px) {
   .slaider__h2 {
     font-size: 25px;
     padding-top: 20px;
@@ -404,7 +403,7 @@ body {
   justify-content: center;
   gap: 35px;
 }
-@media (max-width: 376px) {
+@media (max-width: 436px) {
   .slaider__img {
     margin: 0;
     height: 400px;
@@ -418,7 +417,7 @@ body {
   height: 100%;
   perspective: 1000px;
 }
-@media (max-width: 376px) {
+@media (max-width: 436px) {
   .slaider .card {
     height: 100%;
     border-radius: 10px;
@@ -432,7 +431,7 @@ body {
   transition: transform 0.6s;
   border-radius: 20px;
 }
-@media (max-width: 376px) {
+@media (max-width: 436px) {
   .slaider .card .card__front, .slaider .card .card__back {
     border-radius: 10px;
   }
@@ -448,7 +447,7 @@ body {
      object-fit: cover;
   border-radius: 20px;
 }
-@media (max-width: 376px) {
+@media (max-width: 436px) {
   .slaider .card .card__front img {
     border-radius: 10px;
   }
@@ -465,7 +464,12 @@ body {
   font-size: 15px;
   padding: 0 10px 0 10px;
 }
-@media (max-width: 376px) {
+@media (max-width: 1449px) {
+  .slaider .card .card__back .slaideer__content {
+    font-size: 11px;
+  }
+}
+@media (max-width: 436px) {
   .slaider .card .card__back .slaideer__content {
     font-size: 11px;
   }
@@ -503,7 +507,7 @@ span:hover {
   max-width: 1500px;
   padding-bottom: 50px;
 }
-@media (max-width: 376px) {
+@media (max-width: 436px) {
   .container2 .block {
     margin: 0;
     display: block;
@@ -514,7 +518,7 @@ span:hover {
 .container2 .block__cart1 {
   margin: 5% 0 8% 43%;
 }
-@media (max-width: 376px) {
+@media (max-width: 436px) {
   .container2 .block__cart1 {
     margin: 0;
     padding: 0;
@@ -526,7 +530,7 @@ span:hover {
   font-weight: 900;
   border-bottom: 1px solid #e73e58;
 }
-@media (max-width: 376px) {
+@media (max-width: 436px) {
   .container2 .block__cart1__h3 {
     margin: 0;
     padding-left: 38%;
@@ -538,7 +542,7 @@ span:hover {
   height: 445px;
   padding-left: 50px;
 }
-@media (max-width: 376px) {
+@media (max-width: 436px) {
   .container2 .block__cart1-ymaps {
     width: 350px;
     height: 300px;
@@ -551,7 +555,16 @@ span:hover {
   padding-left: 50px;
   max-width: 700px;
 }
-@media (max-width: 376px) {
+@media (max-width: 1025px) {
+  .container2 .block p {
+    font-size: 15px;
+    padding-top: 12px;
+    max-width: 376px;
+    padding-left: 25px;
+    padding-top: 15%;
+  }
+}
+@media (max-width: 430px) {
   .container2 .block p {
     font-size: 15px;
     padding-top: 12px;
@@ -568,7 +581,19 @@ span:hover {
   height: 300px;
   padding-top: 50px;
 }
-@media (max-width: 376px) {
+@media (max-width: 1025px) {
+  .footer {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+@media (max-width: 769px) {
+  .footer {
+    max-width: 768px;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 436px) {
   .footer {
     margin-top: 50px;
     height: -moz-fit-content;
@@ -581,7 +606,12 @@ span:hover {
   cursor: pointer;
   display: flex;
 }
-@media (max-width: 376px) {
+@media (max-width: 769px) {
+  .footer a {
+    padding-left: 30px;
+  }
+}
+@media (max-width: 436px) {
   .footer a {
     padding-left: 30px;
   }
@@ -592,7 +622,18 @@ span:hover {
   width: -moz-max-content;
   width: max-content;
 }
-@media (max-width: 376px) {
+@media (max-width: 1025px) {
+  .footer h4 {
+    font-size: 15px;
+  }
+}
+@media (max-width: 769px) {
+  .footer h4 {
+    font-size: 20px;
+    margin-left: 5px;
+  }
+}
+@media (max-width: 436px) {
   .footer h4 {
     font-size: 20px;
     margin-left: 5px;
@@ -609,6 +650,11 @@ span:hover {
 .footer__block-3 h4 {
   font-size: 30px;
 }
+@media (max-width: 1025px) {
+  .footer__block-3 h4 {
+    font-size: 15px;
+  }
+}
 .footer__block-4 input {
   padding: 20px 70px 20px 20px;
   border-radius: 20px 0 0 0px;
@@ -617,7 +663,17 @@ span:hover {
   border: none;
   margin-top: 20px;
 }
-@media (max-width: 376px) {
+@media (max-width: 1025px) {
+  .footer__block-4 input {
+    padding: 15px 50px 15px 15px;
+  }
+}
+@media (max-width: 769px) {
+  .footer__block-4 input {
+    padding: 15px 50px 15px 15px;
+  }
+}
+@media (max-width: 436px) {
   .footer__block-4 input {
     padding: 15px 50px 15px 15px;
   }
@@ -634,7 +690,14 @@ span:hover {
   font-size: 15px;
   font-weight: 900;
 }
-@media (max-width: 376px) {
+@media (max-width: 1025px) {
+  .footer__block-4 button {
+    padding: 14.5px 100px 15px 20px;
+    font-size: 12px;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 436px) {
   .footer__block-4 button {
     padding: 14.5px 100px 15px 20px;
     font-size: 12px;

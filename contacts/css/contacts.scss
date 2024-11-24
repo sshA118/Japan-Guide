@@ -23,10 +23,10 @@
     }
     &__form{
         color: #fff;
-        @media (max-width:376px) {
+        @media (max-width:436px) {
             width: 95%;   
             height: 75%;
-        } 
+        }
         :active, :hover, :focus {
             outline: 0;
             outline-offset: 0;
@@ -91,14 +91,13 @@
         }
     }       
 }
-
 .main{
     &__contacts{
         &__title{
             display: flex;
             background-color: #191919;
             justify-content: space-between;
-            @media (max-width:376px) {
+            @media (max-width:436px) {
                 flex-direction: column;
             }
             &-h2{
@@ -107,7 +106,7 @@
             padding-left: 100px;
             padding-top: 8px;
             animation: myAnim 0.6s ease 0s 1 reverse both;
-            @media (max-width:376px) {
+            @media (max-width:436px) {
                 font-size: 20px;
                 padding-left:6%;
                 padding-top: 0;    
@@ -127,11 +126,10 @@
             &:hover{
                 cursor: pointer;
             }
-            @media (max-width:376px){  
+            @media (max-width:436px){  
                 margin-left: 13%;
             }
         }
-        
         &__block{
             display: flex;
             flex-wrap: wrap;
@@ -142,22 +140,20 @@
             background-color: #191919;
             padding: 30px;
             animation: myAnim 0.8s ease 0s 1 reverse both;
-            @media (max-width:376px) {
+            @media (max-width:436px) {
                 gap: 10px;
                 font-size: 10px;
                 padding: 0px;
             }
             &-1{
                 display: flex;
-                // border: 2px solid;
                 border-radius: 20px; 
                 padding: 20px;
                 img{
-                    @media (max-width:376px) {
+                    @media (max-width:436px) {
                         max-width:38px ;
                         padding: 0;
                     }
-    
                 }
                 &-text{
                     padding-left: 20px;
@@ -165,7 +161,7 @@
                         font-size: 15px;
                         max-width: 170px;
                         font-family: serif;
-                        @media (max-width:376px) {
+                        @media (max-width:436px) {
                             font-size: 10px;        
                         }
                     }
@@ -178,5 +174,4 @@
 .block__ymaps{
     display: flex;
     height: 300px;
-
 }

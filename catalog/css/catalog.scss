@@ -1,6 +1,6 @@
 .catalog{
     display: flex;
-    @media (max-width:376px) {
+    @media (max-width:436px) {
         flex-direction: column;            
     }
     :active, :hover, :focus {
@@ -13,7 +13,7 @@
         &-h2{
             display: flex;
             margin-top: 50px;
-            @media (max-width:376px) {
+            @media (max-width:436px) {
                 margin: 0;   
             }
             input{
@@ -27,14 +27,14 @@
                 width: 264px;
                 color: #fff;   
                 
-                @media (max-width:376px) {
+                @media (max-width:436px) {
                     margin-left: -70px;
                     margin-bottom: 20px;
                 }
             }
             input::placeholder{
                 color: #fff; 
-                @media (max-width:376px){  
+                @media (max-width:436px){  
                     font-size: 15px;
                 }
             }
@@ -42,7 +42,7 @@
                 font-size: 50px;
                 margin-left: 40px;
                 color:#fff;
-                @media (max-width:376px){  
+                @media (max-width:436px){  
                     font-size: 20px;
                     margin-left: -6%;
                 }
@@ -97,6 +97,11 @@
         display: flex;
         flex-wrap: wrap;
         gap: 20px;
+        @media (max-width:436px) {
+            margin-top: 20px;   
+            display: block;
+            width: 343px;    
+        }
         @media (max-width:376px) {
             margin-top: 20px;   
             display: block;       
@@ -107,8 +112,12 @@
             margin-top: 20px;
             border-radius: 13px;
             background-color: #222222;
+            @media (max-width:436px) {
+                display: block;
+            }
             @media (max-width:376px) {
                 display: block;
+                max-width: 299px;
             }
             h3{
                 color: #fff;
@@ -119,6 +128,9 @@
                 width: 384px;
                 height: 211px;
                 border-radius: 20px;
+                @media (max-width:436px) {
+                    max-width: 323px;
+                }
                 @media (max-width:376px) {
                     max-width: 280px;
                 }

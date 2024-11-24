@@ -179,9 +179,8 @@ a:hover{
     position: relative;
     z-index: 2222;
     display:none;
-    background: rgba(0, 0, 0, 0.2);
-    @media (max-width:376px) {
-        display: block;
+@media (max-width:426px) {
+    display: block;
 
 }
 .burger-icon {
@@ -238,8 +237,7 @@ body{
 .main{
     background: url(../image/tokio_noch.jpg) no-repeat center center / cover;
     height: 80vh;  
-    
-    @media (max-width:376px) {
+    @media (max-width:436px) {
         height: 50vh;       
 
     }
@@ -249,7 +247,7 @@ body{
         font-size: 30px;        
         color: #fff;
         margin-top: 100px;
-        @media (max-width:376px) {
+        @media (max-width:436px) {
             margin-top: 0;
             font-size: 15px;
         }
@@ -293,7 +291,7 @@ body{
         background-color: #222222;
         padding: 0 20px 0 0;
         border-bottom: 2px solid #e73e58;
-        @media (max-width:376px) {
+        @media (max-width:436px) {
             display: none;
         }
         &__top{
@@ -301,7 +299,7 @@ body{
             display: flex;  
             img{
                 cursor: pointer;
-                @media (max-width:376px) {
+                @media (max-width:436px) {
                     max-width: 20px;
                 }
             }
@@ -309,7 +307,7 @@ body{
             font-size: 24px;
             animation: myAnim 0.4s ease 0s 1 reverse both;
             padding-top: 9px;
-            @media (max-width:376px) {
+            @media (max-width:436px) {
                 font-size: 20px;
             }
         }
@@ -320,12 +318,10 @@ body{
             font-size: 24px;
             animation: myAnim 0.4s ease 0s 1 reverse both;
             margin-right: 10px;
-            @media (max-width:376px) {
+            @media (max-width:436px) {
                 font-size: 12px;
                 gap: 26px;
-
             }
-
         }
     }
     &__title{
@@ -335,7 +331,7 @@ body{
         color: #ffffff;
         font-size: 36px;
         font-weight:700;
-        @media (max-width:376px) {
+        @media (max-width:436px) {
             font-size: 15px;   
         }
         &-h2{
@@ -349,7 +345,7 @@ body{
             padding-top: 50px;
             cursor: pointer;
             animation: myAnim 2s ease 0s 1 reverse both;
-            @media (max-width:376px) {
+            @media (max-width:436px) {
                 max-width: 20px;
             }
         }
@@ -365,9 +361,9 @@ body{
     animation: mani 1s ease-in-out 0s 1 normal forwards;
 }
 .slaider{
-    @media (max-width:376px) {
-        overflow-x: scroll;
-        overflow-y: hidden;
+@media (max-width:436px) {
+    overflow-x: scroll;
+    overflow-y: hidden;
 }
     &__h2 {
         color: #fff;
@@ -377,7 +373,7 @@ body{
         justify-content: center;
         padding-top: 60px;
         font-weight: 100;
-        @media (max-width: 376px) {
+        @media (max-width: 436px) {
             font-size: 25px;
             padding-top: 20px;  
             margin-bottom: 12px;
@@ -391,7 +387,7 @@ body{
         display: flex;
         justify-content: center;
         gap: 35px;
-            @media (max-width: 376px) {
+            @media (max-width: 436px) {
                 margin: 0;
                 height: 400px;
                 width: 1200px;
@@ -403,7 +399,7 @@ body{
             width: 17%;
             height: 100%;
             perspective: 1000px;
-            @media (max-width: 376px)    {
+            @media (max-width: 436px)    {
                 height: 100%;
                 border-radius: 10px;
             }
@@ -414,7 +410,7 @@ body{
                 backface-visibility: hidden;
                 transition: transform 0.6s;
                 border-radius: 20px;
-                @media (max-width: 376px) {
+                @media (max-width: 436px) {
                     border-radius: 10px;
                 }
             }
@@ -426,7 +422,7 @@ body{
                     height: 100%;
                     object-fit: cover;
                     border-radius: 20px;
-                    @media (max-width: 376px) {
+                    @media (max-width: 436px) {
                         border-radius: 10px;
                     }
                 }
@@ -437,16 +433,16 @@ body{
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                @media (max-width:376px) {
-            
-            }
                 .slaideer__content {
                     color: white;
                     font-size: 15px;
                     padding: 0 10px 0 10px;
-                    @media (max-width:376px) {
+                    @media (max-width:1449px) {
                         font-size: 11px;
-                }
+                    }
+                    @media (max-width:436px) {
+                        font-size: 11px;
+                    }
                     .span__slaider{
                         font-weight: 900;
                     }
@@ -479,16 +475,15 @@ span:hover{
         color: white;
         max-width: 1500px;
         padding-bottom: 50px;
-        @media (max-width:376px) {
+        @media (max-width:436px) {
             margin: 0;
             display: block;
             border-radius: 0;
-            padding-bottom: 20px;
+            padding-bottom: 20px;   
         }
         &__cart1{   
             margin: 5% 0 8% 43%; 
-            
-            @media (max-width:376px) {
+            @media (max-width:436px) {
                 margin: 0;   
                 padding: 0;
             }
@@ -497,7 +492,7 @@ span:hover{
                     margin-right: 208px;
                     font-weight: 900;
                     border-bottom: 1px solid #e73e58;
-                    @media (max-width:376px) {
+                    @media (max-width:436px) {
                         margin: 0;
                         padding-left: 38%;
                         margin-bottom: 12px;
@@ -507,7 +502,7 @@ span:hover{
                 width:560px;
                 height:445px;
                 padding-left: 50px;
-                @media (max-width:376px) {
+                @media (max-width:436px) {
                     width: 350px;
                     height: 300px;
                     padding: 0 20px 0 35px; 
@@ -519,13 +514,18 @@ span:hover{
             padding-top: 120px;
             padding-left:50px;
             max-width: 700px;    
-            @media (max-width:376px) {
+            @media (max-width:1025px) {
                 font-size: 15px;
                 padding-top: 12px;
                 max-width: 376px;
                 padding-left: 25px;
-
-    
+                padding-top: 15%;
+            }
+            @media (max-width:430px) {
+                font-size: 15px;
+                padding-top: 12px;
+                max-width: 376px;
+                padding-left: 25px;
             }
         }
     }
@@ -537,7 +537,14 @@ span:hover{
     justify-content: space-around;
     height: 300px;
     padding-top: 50px;
-    @media (max-width:376px) {
+    @media (max-width:1025px) {
+        height: fit-content;
+    }
+    @media (max-width:769px) {
+        max-width: 768px;
+        flex-wrap: wrap;
+    }
+    @media (max-width:436px) {
         margin-top: 50px;
         height: fit-content; 
         display: block;      
@@ -546,7 +553,10 @@ span:hover{
     a{ 
         cursor: pointer;
         display: flex;
-        @media (max-width:376px) {
+        @media (max-width:769px) {
+            padding-left: 30px;    
+        }
+        @media (max-width:436px) {
             padding-left: 30px;    
         }
     }
@@ -554,11 +564,18 @@ span:hover{
         font-size: 30px;
         border-bottom:1px solid #e73e58;
         width: max-content;
-        @media (max-width:376px) {
+        @media (max-width:1025px) {
+             font-size: 15px;
+        }
+        @media (max-width:769px) {
             font-size: 20px;
             margin-left: 5px;
-    
-    }
+            
+        }
+        @media (max-width:436px) {
+            font-size: 20px;
+            margin-left: 5px;
+        }
     }
     &__block{
         &-2{
@@ -568,6 +585,9 @@ span:hover{
         &-3{
             h4{
                 font-size: 30px;
+                @media (max-width:1025px) {
+                    font-size: 15px;
+                }
             }
             display: flex;
             flex-direction: column;
@@ -580,9 +600,16 @@ span:hover{
                 outline: none;
                 border: none;
                 margin-top: 20px;
-                @media (max-width:376px) {
+                @media (max-width:1025px) {
                     padding: 15px 50px 15px 15px;
-            }
+                }
+                @media (max-width:769px) {
+                    padding: 15px 50px 15px 15px;
+                }
+                @media (max-width:436px) {
+                padding: 15px 50px 15px 15px;
+                }
+
             }
             button{
                 margin-left: -9px;
@@ -595,11 +622,16 @@ span:hover{
                 width: 102px;
                 font-size: 15px;
                 font-weight: 900;
-                @media (max-width:376px) {
+                @media (max-width:1025px) {
                     padding: 14.5px 100px 15px 20px;
-                    font-size: 12px;
+                    font-size: 12px;    
                     margin-bottom: 30px;
-            }
+                }
+                @media (max-width:436px) {
+                    padding: 14.5px 100px 15px 20px;
+                    font-size: 12px;    
+                    margin-bottom: 30px;
+                }
             }
             button:hover{
                 background-color: #000000;

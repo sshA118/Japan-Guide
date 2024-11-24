@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded',function(){
-    urlMoc = 'https://672a07666d5fa4901b6f7076.mockapi.io/card/'
+    urlMoc = 'https://672a07666d5fa4901b6f7076.mockapi.io/card/?'
     let request = new XMLHttpRequest();
     request.open("GET", urlMoc);
     request.responseType = "json";
