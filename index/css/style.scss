@@ -1,20 +1,3 @@
-@keyframes mani {
-	0% {
-		transform: translateY(100px);
-	}
-
-	100% {
-		transform: translateY(0);
-	}
-}
-@font-face {
-    font-family:Bad;
-    src: url(../fonts/SourGummy-VariableFont_wdth\,wght.ttf);
-}
-@font-face {
-    font-family:Bad2;
-    src: url(../fonts/ShantellSans-Italic-VariableFont_BNCE\,INFM\,SPAC\,wght.ttf);
-}
 *{
     margin: 0;
     padding: 0;
@@ -22,10 +5,14 @@
     font-family: Bad;
     font-family: Bad2;
 }
-a{
+.link{
     text-decoration: none;
     color: #fff;
     transition:  0.3s ease-in-out;
+}
+.link:hover{
+    color: #e73e58;
+    transform: scale(0.98);
 }
 html {
     scroll-behavior: smooth;
@@ -34,18 +21,35 @@ body {
     transition: transform 1000ms;
     max-height:1500px;
 }
-a:hover{
-    color: #e73e58;
-    transform: scale(0.98);
+body{
+    background-color: #191919; 
+}  
+@font-face {
+    font-family:Bad;
+    src: url(../fonts/SourGummy-VariableFont_wdth\,wght.ttf);
 }
-// @keyframes coup {
-//     0%{
-//         transform: rotate(0);
-//     }
-//     100%{
-//         transform: rotate(90deg);
-//     }
-// }
+@font-face {
+    font-family:Bad2;
+    src: url(../fonts/ShantellSans-Italic-VariableFont_BNCE\,INFM\,SPAC\,wght.ttf);
+}
+@keyframes mani {
+    0% {
+        transform: translateY(100px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+@keyframes loader_5191 {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+// прелоадер
 .preloader {
     position: fixed;
     left: 0;
@@ -57,14 +61,6 @@ a:hover{
     z-index: 100911;
     display: flex;
 }
-@keyframes loader_5191 {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
 .square {
   background: #fff;
   width: 10px;
@@ -117,13 +113,13 @@ a:hover{
 .loaded .preloader {
     display: none;
 }
+//бургер
 .burger-menu {
     position: relative;
     z-index: 2222;
     display:none;
 @media (max-width:426px) {
     display: block;
-
 }
 .burger-icon {
       font-size: 30px;
@@ -168,127 +164,51 @@ a:hover{
       height: 100%;
     }
   }
-body{
-    background-color: #191919;;
-    
+//основа
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222222;
+    padding: 0 2% 0 2%;
+    border-bottom: 2px solid #e73e58;
+    &__logo{
+        display: flex;
+        align-items: center;
+        font-size: 24px;
+        gap: 10px;
+        color: #fff;
+    }
+    &__nav{
+        display: flex;
+        font-size: 24px;
+        gap: 30px;
+    }
 }
-.tab_arrow{
-    max-width: 20px;
-}
-.main{
-    background: url(../image/tokio_noch.jpg) no-repeat center center / cover;
-    height: 80vh;  
-    @media (max-width:436px) {
+.main {
+    background: url(../image/tokyo-goroda.jpg) no-repeat center center / cover;
+    height: 80vh;
+    border-bottom: 2px solid #e73e58;
+    @media (max-width: 436px) {
         height: 50vh;       
-
-    }
-    &__arrow{
-        display: flex;
-        justify-content: space-between;
-        font-size: 30px;        
-        color: #fff;
-        margin-top: 100px;
-        @media (max-width:436px) {
-            margin-top: 0;
-            font-size: 15px;
-        }
-        p{
-            border-radius: 50px;
-            transition: 0.5s ease-in-out;
-            color: #fff;    
-        }
-        p:hover{
-            cursor: pointer;
-            transform: scale(0.9);
-            color: #e73e58;
-            
-            
-        }
-    }
-    [data-title] {
-        position: relative;
-        z-index: 4;
-      }
-      [data-title]::after {
-        content: attr(data-title); 
-        position: absolute;
-        z-index: 4;
-        left: 2em;top: 30px;
-        opacity: 0; 
-        transition: 0.3s;
-        pointer-events: none; 
-        color: #fff;
-        width: 120px;
-        font-size: 25px;
-        font-weight: 500;
-      }
-      [data-title]:hover::after {
-        opacity: 1;
-      }
-    &__header{
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        background-color: #222222;
-        padding: 0 20px 0 0;
-        border-bottom: 2px solid #e73e58;
-        @media (max-width:436px) {
-            display: none;
-        }
-        &__top{
-            padding-left: 20px;
-            display: flex;  
-            img{
-                cursor: pointer;
-                @media (max-width:436px) {
-                    max-width: 20px;
-                }
-            }
-            &-logo{
-            font-size: 24px;
-            padding-top: 9px;
-            @media (max-width:436px) {
-                font-size: 20px;
-            }
-        }
-        }
-        &__nav{
-            display: flex;
-            gap: 44px;
-            font-size: 24px;
-            margin-right: 10px;
-            @media (max-width:436px) {
-                font-size: 12px;
-                gap: 26px;
-            }
-        }
     }
     &__title{
-        display: flex;  
-        flex-direction: column;
-        align-items: center;
-        color: #ffffff;
-        font-size: 36px;
-        font-weight:700;
-        @media (max-width:436px) {
-            font-size: 15px;   
-        }
-        &-h2{
-            font-weight: 400;
-        }
-        &-img{
-            padding-top: 50px;
+        display: flex;
+        justify-content: center;
+        color: #fff;
+        padding-top: 10%;
+    }
+    .container{
+        .main__arrow{
+            padding-left: 1%;
+            padding-right: 1%;
+            display: flex;
+            justify-content: space-between;
+            color: #fff;
             cursor: pointer;
-            @media (max-width:436px) {
-                max-width: 20px;
-            }
         }
     }
-}
-.main__title-p{
-    display: flex;  
-    justify-content: space-around;
-}
+}   
 
 .slaider__img.manifestation-show{
     opacity: 1;
@@ -389,9 +309,6 @@ body{
                 transform: rotateY(0deg);
             }
         }
-}
-span:hover{  
-    cursor: pointer;
 }
 .container2.manifestation-show{
     opacity: 1;

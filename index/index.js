@@ -1,41 +1,33 @@
 document.addEventListener('DOMContentLoaded', function() {
-let url2 = ['0',
-            './index/image/jij.png',
-            './index/image/Rainbow.jpg',
-            './index/image/Building-Japan-Wallpaper.png',
-            './index/image/fon.png',
-            './index/image/fonstola.jpg',
-            './index/image/fonstola.ru_167395.jpg',
-            './index/image/tokio_noch.jpg',
-            './index/image/tokyo-goroda.jpg',
-        ]
-let btn = document.getElementById('btn')
-let btn1 = document.getElementById('btn1')
-let main = document.getElementById('main')
-let math = 0
-function per (click){
-btn.addEventListener("click",() =>{
-        if(btn = 1){    
-            let i = 0;
-            while (i < 1){
-                math = Math.floor((Math.random() * 8) + 1);
-                i++;
-                main.style.background = `url(${url2[math]})no-repeat center center / cover` 
-}
-        }
-    })  
-btn1.addEventListener("click",() =>{
-        if(btn1 = 1){
-            let i = 0;
-            while (i < 1){
-                math = Math.floor((Math.random() * 8) + 1);
-                i++;
-                main.style.background = `url(${url2[math]})no-repeat center center / cover`
-            }
-        }
-    })  
-}
-per()
+    const url_image = [
+        './index/image/jij.png',
+        './index/image/Rainbow.jpg',
+        './index/image/Building-Japan-Wallpaper.png',
+        './index/image/fon.png',
+        './index/image/fonstola.jpg',
+        './index/image/fonstola.ru_167395.jpg',
+        './index/image/tokio_noch.jpg',
+        './index/image/tokyo-goroda.jpg',
+    ]
+    const main = document.getElementById('main')
+    const left = document.getElementById("left")
+    const right = document.getElementById("right")
+    let count = 0;
+
+    function updateBackground() {
+    main.style.background = `url(${url_image[count]}) no-repeat center center/cover`;
+    }
+    left.addEventListener('click', () => {
+    count = (count - 1 + url_image.length) % url_image.length;
+    updateBackground();
+    });
+    right.addEventListener('click', () => {
+    count = (count + 1) % url_image.length;
+    updateBackground();
+    });
+    updateBackground();
+    
+
 ymaps.ready(function () { 
     let Map = new ymaps.Map("YMapsID", {
         center: [35.688366, 139.753915],
