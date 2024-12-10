@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
-    let legal = localStorage.getItem('id');
+    const url = new URLSearchParams(document.location.search)
+    const legal = url.get('id')
+    
     let urlMoc = `https://672a07666d5fa4901b6f7076.mockapi.io/card/?`;
     let blockText = document.querySelector('h3');
     let request = new XMLHttpRequest();
@@ -28,9 +30,6 @@ document.addEventListener('DOMContentLoaded', function() {
     };
     request.send();
 }); 
-
-
-
 function initMap() {
     let map = localStorage.getItem('map');
 

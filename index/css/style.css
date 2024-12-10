@@ -11,6 +11,11 @@
   color: #fff;
   transition: 0.3s ease-in-out;
 }
+@media (max-width: 426px) {
+  .link {
+    font-size: 12px;
+  }
+}
 
 .link:hover {
   color: #e73e58;
@@ -187,6 +192,11 @@ body {
   padding: 0 2% 0 2%;
   border-bottom: 2px solid #e73e58;
 }
+@media (max-width: 426px) {
+  .header {
+    display: none;
+  }
+}
 .header__logo {
   display: flex;
   align-items: center;
@@ -201,20 +211,16 @@ body {
 }
 
 .main {
-  background: url(../image/tokyo-goroda.jpg) no-repeat center center/cover;
+  background: url(../image/Rainbow.jpg) no-repeat center center/cover;
   height: 80vh;
-  border-bottom: 2px solid #e73e58;
-}
-@media (max-width: 436px) {
-  .main {
-    height: 50vh;
-  }
+  transition: all ease 0.4s;
 }
 .main__title {
   display: flex;
   justify-content: center;
   color: #fff;
   padding-top: 10%;
+  font-size: 29px;
 }
 .main .container .main__arrow {
   padding-left: 1%;
@@ -242,7 +248,6 @@ body {
   font-size: 52px;
   display: flex;
   justify-content: center;
-  padding-top: 60px;
   font-weight: 100;
 }
 @media (max-width: 436px) {
@@ -348,83 +353,36 @@ body {
 }
 
 .container2 {
-  display: flex;
-  justify-content: space-around;
-  opacity: 0;
-  padding-bottom: 6%;
-}
-.container2 .block {
+  color: #fff;
+  margin: 0 14% 5% 14%;
   background-color: #222222;
+  border-radius: 2%;
+}
+
+.block__title {
   display: flex;
-  border-radius: 15px;
-  color: white;
-  max-width: 1500px;
-  padding-bottom: 50px;
-}
-@media (max-width: 436px) {
-  .container2 .block {
-    margin: 0;
-    display: block;
-    border-radius: 0;
-    padding-bottom: 20px;
-  }
-}
-.container2 .block__cart1 {
-  margin: 5% 0 8% 43%;
-}
-@media (max-width: 436px) {
-  .container2 .block__cart1 {
-    margin: 0;
-    padding: 0;
-  }
-}
-.container2 .block__cart1__h3 {
-  font-size: 35px;
-  margin-right: 208px;
-  font-weight: 900;
+  justify-content: center;
   border-bottom: 1px solid #e73e58;
+  margin-bottom: 5%;
 }
-@media (max-width: 436px) {
-  .container2 .block__cart1__h3 {
-    margin: 0;
-    padding-left: 38%;
-    margin-bottom: 12px;
-  }
+.block__title__h3 {
+  font-size: 29px;
 }
-.container2 .block__cart1-ymaps {
+
+.block__card {
+  display: flex;
+  justify-content: center;
+  gap: 2%;
+  padding-bottom: 5%;
+}
+.block__card-ymaps {
   width: 560px;
   height: 445px;
-  padding-left: 50px;
 }
-@media (max-width: 436px) {
-  .container2 .block__cart1-ymaps {
-    width: 350px;
-    height: 300px;
-    padding: 0 20px 0 35px;
-  }
-}
-.container2 .block p {
-  font-size: 30px;
-  padding-top: 120px;
-  padding-left: 50px;
-  max-width: 700px;
-}
-@media (max-width: 1025px) {
-  .container2 .block p {
-    font-size: 15px;
-    padding-top: 12px;
-    max-width: 376px;
-    padding-left: 25px;
-    padding-top: 15%;
-  }
-}
-@media (max-width: 430px) {
-  .container2 .block p {
-    font-size: 15px;
-    padding-top: 12px;
-    max-width: 376px;
-    padding-left: 25px;
-  }
+.block__card__p {
+  max-width: 36%;
+  text-align: center;
+  font-size: 27px;
 }
 
 .footer {
@@ -434,6 +392,7 @@ body {
   justify-content: space-around;
   height: 300px;
   padding-top: 50px;
+  margin-top: 100px;
 }
 @media (max-width: 1025px) {
   .footer {

@@ -14,14 +14,14 @@
 // button()
 // setInterval(buttonrev,4000)
 
-// document.getElementById('burger-icon').addEventListener('click', function() {
-//     const menu = document.getElementById('menu');
-//     menu.classList.toggle('active');
-// });
-// document.getElementById('close-icon').addEventListener('click', function() {
-//     const menu = document.getElementById('menu');
-//     menu.classList.remove('active');
-// });
+document.getElementById('burger-icon').addEventListener('click', function() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('active');
+});
+document.getElementById('close-icon').addEventListener('click', function() {
+    const menu = document.getElementById('menu');
+    menu.classList.remove('active');
+});
 
 window.onload = function () {
     document.body.classList.add('loaded_hiding');

@@ -31,157 +31,84 @@
           <ul>
             <li><a href="./index.html">Главная</a></li>
             <li><a href="./contacts.html">Контакты</a></li>
-            <!-- <li><a href="./">Достопримечательности</a></li> -->
           </ul>
         </nav>
     </div>
+
     <header class="header">
         <div class="header__logo">
             <img src="./index/image/logo2.svg" alt="logo">
-            <p class="header__logo__p">Guide Tokio</p>
+            <a class="header__logo__p link" href="./index.html" >Guide Tokio</a>
         </div>
         <div class="header__nav">
             <a class="link" href="./contacts.html">Контакты</a>
             <a class="link" href="./catalog.html">Достопримечательности</a>
         </div>
     </header>
+    <div class="container">
+        <div class="search">
+            <div class="filter"id=filter>
+                <button class="drop"id="drop">
+                    Локации
+                </button>
+                <div class="filter__box" id=filter__box >
+                    <div class="filter__list" id=filter__list >
+                        <a href="#"  class="filter__list__category filter__1" id="filter__list__category" >Парки</a>
+                        <a href="#" class="filter__list__category filter__1"id="filter__list__category">Музеи</a>
+                        <a href="#" class="filter__list__category filter__1"id="filter__list__category">Рестораны</a>
+                        <a href="#" class="filter__list__category filter__1"id="filter__list__category">Храмы</a>
+                        <a href="#" class="filter__list__category filter__1"id="filter__list__category">Торговые центры</a>
+                        <a href="#" class="filter__list__category filter__1"id="filter__list__category">Уличные рынки</a>
+                        <a href="#" class="filter__list__category filter__1"id="filter__list__category">Убрать все</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="filter" id="filter__2">
+                <button class="drop" id="drop__2">
+                    Фильтры
+                </button>
+                <div class="filter__box" id=filter__box__2>
+                    <div class="filter__list" id=filter__list__2>
+                        <a href="#"  class="filter__list__category filter__2" id="filter__list__category__2">Популярное</a>
+                        <a href="#" class="filter__list__category filter__2"id="filter__list__category__2">Не популярное</a>
+                        <a href="#" class="filter__list__category filter__2" id="filter__list__category__2">Новинки</a>
+                        <a href="#" class="filter__list__category filter__2" id="filter__list__category__2">Старые</a>
+                        <a href="#" class="filter__list__category filter__2"id="filter__list__category">Убрать все</a>
+                    </div>
+                </div>
+            </div>
+            <div class="search__input">
+                <input id="search" type="text" placeholder="Поиск" name="text" class="input">
+            </div>
+        </div>
+    </div>
+           
+        
+
     <div class="catalog">
-        <div class="catalog__filter">
-            <div class="catalog__filter-h2">
-                <h2>Каталог</h2>
-                <input type="text" id="search" autocomplete="off" placeholder="Введите название достопримечательности">
-            </div>
-            <div class="catalog__filter-filter" id="filter">
-                <ul>
-                    <li onclick="filterCatalog('parks')" class="li__style" >Парки</li>
-                    <li onclick="filterCatalog('museums')" class="li__style">Музеи</li>
-                    <li onclick="filterCatalog('restaurants')" class="li__style">Рестораны</li>
-                    <li onclick="filterCatalog('temples')" class="li__style">Храмы</li>
-                    <li onclick="filterCatalog('malls')" class="li__style">Торговые центры</li>
-                    <li onclick="filterCatalog('markets')" class="li__style">Уличные рынки</li>
-                    <li onclick="filterCatalog('exit')" id="reset-filters" class="li__exit">Снять фильтры</li>
-                </ul>
-            </div>
+        <div class="catalog__card" id="catalog__card">
+            <!--- сюда залетают карточки -->
         </div>
-        <div class="catalog__card">
-            <div class="catalog__card-1"id="0" data-category="temples">
-                <div class="catalog__card-1-title" id="card" > 
-                    <img  id="img0" alt="hram">
-                    <h3 id="h0"></h3>
-                    <p id="textP0"></p>
-                    <h4>Адрес:</h4>
-                    <p id="p0"></p>
-                </div>
-            </div>
-            <div class="catalog__card-1"id="1" data-category="museums">
-                <div class="catalog__card-1-title"> 
-                    <img  id="img1" alt="muzei">
-                    <h3 id="h1"></h3>
-                    <p id="textP1"></p>
-                    <h4>Адрес:</h4>
-                    <p id="p1"></p>
-                </div>
-            </div>
-            <div class="catalog__card-1"id="2" data-category="museums">
-                <div class="catalog__card-1-title"> 
-                    <img id="img2" alt="muzei">
-                    <h3 id="h2"></h3>
-                    <p id="textP2"></p>
-                    <h4>Адрес:</h4>
-                    <p id="p2"></p>
-                </div>
-            </div>
-            <div class="catalog__card-1"id="3" data-category="malls">
-                <div class="catalog__card-1-title"> 
-                    <img  id="img3" alt="tower">
-                    <h3 id="h3"></h3>
-                    <p id="textP3"></p>
-                    <h4>Адрес:</h4>
-                    <p id="p3"></p>
-                </div>
-            </div>
-            <div class="catalog__card-1"id="4" data-category="markets">
-                <div class="catalog__card-1-title"> 
-                    <img  id="img4" alt="muzei">
-                    <h3 id="h4"></h3>
-                    <p id="textP4"></p>
-                    <h4>Адрес:</h4>
-                    <p id="p4"></p>
-                </div>
-            </div>
-            <div class="catalog__card-1" id="5" data-category="markets">
-                <div class="catalog__card-1-title"> 
-                    <img id="img5" alt="muzei">
-                    <h3 id="h5"></h3>
-                    <p id="textP5" ></p>
-                    <h4>Адрес:</h4>
-                    <p id="p5"></p>
-                </div>
-            </div>
-            <div class="catalog__card-1" id="6" data-category="malls">
-                <div class="catalog__card-1-title"> 
-                    <img  id="img6" alt="muzei">
-                    <h3 id="h6"></h3>
-                    <p id="textP6"></p>
-                    <h4>Адрес:</h4>
-                    <p id="p6"></p>
-                </div>
-            </div>
-            <div class="catalog__card-1" id="7" data-category="restaurants">
-                <div class="catalog__card-1-title"> 
-                    <img  id="img7" alt="rest">
-                    <h3 id="h7"></h3>
-                    <p id="textP7"></p>
-                    <h4>Адрес:</h4>
-                    <p id="p7"></p>
-                </div>
-            </div>
-            <div class="catalog__card-1" id="8" data-category="restaurants">
-                <div class="catalog__card-1-title"> 
-                    <img  id="img8" alt="muzei">
-                    <h3 id="h8"></h3>
-                    <p id="textP8"> </p>
-                    <h4>Адрес:</h4>
-                    <p id="p8"></p>
-                </div>
-            </div>
-            <div class="catalog__card-1" id="9" data-category="parks">
-                <div class="catalog__card-1-title"> 
-                    <img  id="img9" alt="muzei">
-                    <h3 id="h9"></h3>
-                    <p id="textP9"></p>
-                    <h4>Адрес:</h4>
-                    <p id="p9"></p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="pagination">
-        <div class="container">
-            <button id="prev" class="pagination__btn" disabled>🡰</button>
-            <span id="page-numbers" class="pagination"></span>
-            <button id="next" class="pagination__btn">🡺</button>
-        </div>
-    </div>
-    
+    </div>    
     <div class="footer">
         <div class="footer__block-1">
             <h4 >Навигация</h4>
-            <a href="../index/index.html">
+            <a class="link"href="../index/index.html">
                 Главная
             </a>
-            <a href="../contacts/contacts.html">Контакты</a>
+            <a class="link"href="../contacts/contacts.html">Контакты</a>
         </div>
         <div class="footer__block-2">
             <h4>Техническая поддержка</h4>
-            <a href="../contacts/contacts.html">Если у вас возникли <br> вопросы или проблемы, <br>мы готовы помочь!</a>
-            <a href="../contacts/contacts.html">Тех-поддержка</a>
+            <a class="link"href="../contacts/contacts.html">Если у вас возникли <br> вопросы или проблемы, <br>мы готовы помочь!</a>
+            <a class="link"href="../contacts/contacts.html">Тех-поддержка</a>
         </div>
         <div class="footer__block-3">
             <h4>Политика</h4>
-            <a href="#">Условия использования</a>
-            <a href="#">Конфиденциальность</a>
-            <a href="#">Настройки Cookie</a>
+            <a class="link"href="#">Условия использования</a>
+            <a class="link"href="#">Конфиденциальность</a>
+            <a class="link"href="#">Настройки Cookie</a>
             <a>Правила</a>
         </div>
         <div class="footer__block-4" id="footer__block-4" >

@@ -9,6 +9,9 @@
     text-decoration: none;
     color: #fff;
     transition:  0.3s ease-in-out;
+    @media (max-width:426px){
+        font-size: 12px;
+    }
 }
 .link:hover{
     color: #e73e58;
@@ -172,6 +175,9 @@ body{
     background-color: #222222;
     padding: 0 2% 0 2%;
     border-bottom: 2px solid #e73e58;
+    @media (max-width:426px){
+        display: none;
+    }
     &__logo{
         display: flex;
         align-items: center;
@@ -180,23 +186,23 @@ body{
         color: #fff;
     }
     &__nav{
-        display: flex;
+        display: flex;  
         font-size: 24px;
         gap: 30px;
+
     }
 }
+
 .main {
-    background: url(../image/tokyo-goroda.jpg) no-repeat center center / cover;
+    background: url(../image/Rainbow.jpg) no-repeat center center/cover;
     height: 80vh;
-    border-bottom: 2px solid #e73e58;
-    @media (max-width: 436px) {
-        height: 50vh;       
-    }
+    transition: all ease 0.4s;   
     &__title{
         display: flex;
         justify-content: center;
         color: #fff;
         padding-top: 10%;
+        font-size: 29px;
     }
     .container{
         .main__arrow{
@@ -208,7 +214,7 @@ body{
             cursor: pointer;
         }
     }
-}   
+}  
 
 .slaider__img.manifestation-show{
     opacity: 1;
@@ -225,7 +231,7 @@ body{
         font-size: 52px;
         display: flex;
         justify-content: center;
-        padding-top: 60px;
+        // padding-top: 60px;
         font-weight: 100;
         @media (max-width: 436px) {
             font-size: 25px;
@@ -315,72 +321,37 @@ body{
     animation: mani 1s ease-in-out 0s 1 normal forwards;
 }
 .container2{
+    color: #fff;
+    margin: 0 14% 5% 14%; 
+    background-color: #222222;
+    border-radius: 2%;
+
+}
+.block__title{
     display: flex;
-    justify-content: space-around;
-    opacity: 0;
-    padding-bottom: 6%;
-    .block{
-        background-color: #222222;
-        display: flex;
-        border-radius: 15px;
-        color: white;
-        max-width: 1500px;
-        padding-bottom: 50px;
-        @media (max-width:436px) {
-            margin: 0;
-            display: block;
-            border-radius: 0;
-            padding-bottom: 20px;   
-        }
-        &__cart1{   
-            margin: 5% 0 8% 43%; 
-            @media (max-width:436px) {
-                margin: 0;   
-                padding: 0;
-            }
-                &__h3{
-                    font-size: 35px;
-                    margin-right: 208px;
-                    font-weight: 900;
-                    border-bottom: 1px solid #e73e58;
-                    @media (max-width:436px) {
-                        margin: 0;
-                        padding-left: 38%;
-                        margin-bottom: 12px;
-                    }
-                }
-            &-ymaps{
-                width:560px;
-                height:445px;
-                padding-left: 50px;
-                @media (max-width:436px) {
-                    width: 350px;
-                    height: 300px;
-                    padding: 0 20px 0 35px; 
-                }
-            }
-        }
-        p{
-            font-size: 30px;
-            padding-top: 120px;
-            padding-left:50px;
-            max-width: 700px;    
-            @media (max-width:1025px) {
-                font-size: 15px;
-                padding-top: 12px;
-                max-width: 376px;
-                padding-left: 25px;
-                padding-top: 15%;
-            }
-            @media (max-width:430px) {
-                font-size: 15px;
-                padding-top: 12px;
-                max-width: 376px;
-                padding-left: 25px;
-            }
-        }
+    justify-content: center;
+    border-bottom: 1px solid #e73e58;
+    margin-bottom: 5%;
+    &__h3{
+        font-size: 29px;
     }
 }
+.block__card{
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+    padding-bottom: 5%;
+    &-ymaps{
+        width:560px;
+        height:445px;
+    }
+    &__p{
+        max-width: 36%;
+        text-align: center;
+        font-size: 27px;
+    }
+}
+
 .footer{
     background-color: #222222;
     color: #fff;
@@ -388,6 +359,7 @@ body{
     justify-content: space-around;
     height: 300px;
     padding-top: 50px;
+    margin-top: 100px;
     @media (max-width:1025px) {
         height: fit-content;
     }

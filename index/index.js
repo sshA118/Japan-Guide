@@ -1,19 +1,18 @@
 document.addEventListener('DOMContentLoaded', function() {
     const url_image = [
+        './index/image/tokio_noch.jpg',
         './index/image/jij.png',
         './index/image/Rainbow.jpg',
         './index/image/Building-Japan-Wallpaper.png',
         './index/image/fon.png',
         './index/image/fonstola.jpg',
         './index/image/fonstola.ru_167395.jpg',
-        './index/image/tokio_noch.jpg',
         './index/image/tokyo-goroda.jpg',
     ]
     const main = document.getElementById('main')
     const left = document.getElementById("left")
     const right = document.getElementById("right")
     let count = 0;
-
     function updateBackground() {
     main.style.background = `url(${url_image[count]}) no-repeat center center/cover`;
     }
@@ -26,9 +25,10 @@ document.addEventListener('DOMContentLoaded', function() {
     updateBackground();
     });
     updateBackground();
-    
 
-ymaps.ready(function () { 
+
+    
+    ymaps.ready(function () { 
     let Map = new ymaps.Map("YMapsID", {
         center: [35.688366, 139.753915],
         zoom: 7,
