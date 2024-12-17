@@ -186,7 +186,6 @@
         const commentForm = document.getElementById('commentForm');
         const commentsList = document.querySelector('.comments-list');
 
-        // Загрузка комментариев с сервера
         function loadComments() {
             fetch('https://672a07666d5fa4901b6f7076.mockapi.io/comments')
                 .then(response => response.json())
@@ -198,7 +197,6 @@
                 });
         }
 
-        // Рендеринг комментариев
         function renderComments(comments) {
             commentsList.innerHTML = '';
             comments.forEach(comment => {
@@ -213,28 +211,25 @@
                 commentsList.appendChild(commentItem);
             });
 
-            // Добавляем обработчики для кнопок удаления
             const deleteButtons = document.querySelectorAll('.comment-item button');
             deleteButtons.forEach(button => {
                 button.addEventListener('click', deleteComment);
             });
         }
 
-        // Удаление комментария
         function deleteComment(event) {
             const commentId = event.target.getAttribute('data-id');
             fetch(`https://672a07666d5fa4901b6f7076.mockapi.io/comments/${commentId}`, {
                 method: 'DELETE'
             })
                 .then(() => {
-                    loadComments(); // Перезагружаем комментарии после удаления
+                    loadComments();
                 })
                 .catch(error => {
                     console.error('Ошибка удаления комментария:', error);
                 });
         }
 
-        // Отправка формы
         commentForm.addEventListener('submit', function (event) {
             event.preventDefault();
 
@@ -242,13 +237,11 @@
             const age = document.getElementById('age').value;
             const commentText = document.getElementById('commentText').value;
 
-            // Валидация
             if (!name || !commentText) {
-                alert('Пожалуйста, заполните имя и текст комментария.');
+                alert('заполните имя и текст комментария.');
                 return;
             }
 
-            // Отправка данных на сервер
             fetch('https://672a07666d5fa4901b6f7076.mockapi.io/comments', {
                 method: 'POST',
                 headers: {
@@ -261,8 +254,8 @@
                 })
             })
                 .then(() => {
-                    commentForm.reset(); // Очищаем форму
-                    loadComments(); // Перезагружаем комментарии
+                    commentForm.reset(); 
+                    loadComments();
                 })
                 .catch(error => {
                     console.error('Ошибка отправки комментария:', error);

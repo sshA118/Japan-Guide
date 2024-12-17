@@ -3,21 +3,7 @@
     // &__img {
     //     display: flex;
     //     justify-content: space-evenly;
-    //     @media (max-width: 1025px) {
-    //         overflow-x: scroll;
-    //         gap: 10px;
-    //         scroll-snap-type: x mandatory;
-    //     }   
-    //     @media (max-width: 426px) {
-    //         overflow-x: scroll;
-    //         gap: 10px;
-    //         scroll-snap-type: x mandatory;
-    //     }
-    //     @media (max-width: 376px) {
-    //         overflow-x: scroll;
-    //         gap: 10px;
-    //         scroll-snap-type: x mandatory;
-    //     }
+    //     
     //     &__1, &__2, &__3 {
     //         width: 600px;
     //         border-radius: 10px;
@@ -85,6 +71,11 @@
     gap: 10px;
     padding: 20px;
     justify-content: center;
+    @media (max-width: 436px) {
+      margin-left: 2px;
+      scroll-snap-align: start;
+      overflow-x: scroll;
+    }
   }
 
   .thumbnail {
@@ -110,6 +101,11 @@
   .modal img {
     max-width: 90%;
     max-height: 90%;
+    @media (max-width: 436px) {
+      max-width: 70%;
+      max-height: 70%;
+
+    }
   }
 
   .close {
@@ -132,31 +128,62 @@
     padding: 10px;
     border-radius: 5px;
   }
-
-  .prev {
-    left: 20px;
+.open__big{
+  @media (max-width: 436px) {
+    max-width: 435px;
   }
-
-  .next {
-    right: 20px;
-  }
-  .hidden {
-    display: none;
+}
+.prev {
+  left: 20px;
+}
+.next {
+  right: 20px;
+}
+.hidden {
+  display: none;
 }
 .openImg{
     display: flex;
-    gap: 2%;
+    gap: 1%;
     margin-top: 2%;
     justify-content: space-around;
+    scroll-snap-align: start;
+    overflow-x: scroll;
 }
 .bigImage{
     border-radius: 15px;
-    width: 700px;
+    width: 500px;
+    height: 400px;
+
+    @media (max-width: 1025px) {
+      display: none;
+    }   
+    @media (max-width: 426px) {
+      display: none;
+    }
+    @media (max-width: 376px) {
+      display: none;
+    }
 
 }
 .block__img1{
   width: 700px;
 }
+// @media (max-width: 1025px) {
+  //         overflow-x: scroll;
+  //         gap: 10px;
+  //         scroll-snap-type: x mandatory;
+  //     }   
+  //     @media (max-width: 426px) {
+  //         overflow-x: scroll;
+  //         gap: 10px;
+  //         scroll-snap-type: x mandatory;
+  //     }
+  //     @media (max-width: 376px) {
+  //         overflow-x: scroll;
+  //         gap: 10px;
+  //         scroll-snap-type: x mandatory;
+  //     }
 
 .coments {
   margin: 20px;
@@ -172,13 +199,15 @@
   margin-top: 20px;
   justify-content: center; 
 }
-.container__comments{
-  // max-width: 900px;
-}
 .modal__comments input {
   display: block; 
   margin-bottom: 10px;
   padding: 10px;
+  border-radius: 20px;
+  outline: none;
+  @media (max-width: 436px) {
+    max-width: 370px;
+  }
 
 }
 .btn__form{
@@ -186,16 +215,18 @@
   background-color: #e73e58;
   color: #fff;
   border-radius: 15px;
+  float: right;
 
 }
 .comments-list {
   margin-top: 20px;
-  color:#fff ;
+  color:#fff;
 }
 .comment-item {
-  border: 1px solid #ccc;
+  border: 1px solid #e73e58;
   padding: 10px;
   margin-bottom: 10px;
+
 }
 .comment-item button {
   margin-top: 10px;

@@ -128,8 +128,8 @@ body{
       font-size: 30px;
       cursor: pointer;
       z-index: 1000;
-      margin-bottom: 50px;
       color: #fff;
+      max-width: 50px;
     }
 .menu {
     position: fixed;
@@ -203,6 +203,11 @@ body{
         color: #fff;
         padding-top: 10%;
         font-size: 29px;
+        h2{
+            @media (max-width:436px) {
+                font-size: 20px; 
+            }
+        }
     }
     .container{
         .main__arrow{
@@ -325,6 +330,11 @@ body{
     margin: 0 14% 5% 14%; 
     background-color: #222222;
     border-radius: 2%;
+    @media (max-width:436px) {
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+    }
 
 }
 .block__title{
@@ -349,6 +359,10 @@ body{
         max-width: 36%;
         text-align: center;
         font-size: 27px;
+        @media (max-width:436px) {
+            font-size: 13px;
+            text-transform: none;
+        }
     }
 }
 

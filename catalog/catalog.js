@@ -123,7 +123,6 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(response => response.json())
             .then(data => {
                 if(data.length === 0){
-                    console.log('asd')
                     loader.childNodes[1].textContent = 'Больше ничего нет :('
                 }else{
                     createElement(data);
@@ -131,7 +130,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     loader.style.display =  'none'
                     page++;
                     isLoading = false;
-                    console.log('sad');
+                    console.log('рабатает');
                 }
             })
             .catch(error => {

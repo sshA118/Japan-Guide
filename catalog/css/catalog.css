@@ -8,6 +8,12 @@
   justify-content: center;
   gap: 10%;
 }
+@media (max-width: 436px) {
+  .search {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
 .search .input {
   width: 250px;
   padding: 15px 0px 15px 40px;

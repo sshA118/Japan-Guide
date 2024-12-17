@@ -148,8 +148,8 @@ body {
   font-size: 30px;
   cursor: pointer;
   z-index: 1000;
-  margin-bottom: 50px;
   color: #fff;
+  max-width: 50px;
 }
 .burger-menu .menu {
   position: fixed;
@@ -221,6 +221,11 @@ body {
   color: #fff;
   padding-top: 10%;
   font-size: 29px;
+}
+@media (max-width: 436px) {
+  .main__title h2 {
+    font-size: 20px;
+  }
 }
 .main .container .main__arrow {
   padding-left: 1%;
@@ -358,6 +363,13 @@ body {
   background-color: #222222;
   border-radius: 2%;
 }
+@media (max-width: 436px) {
+  .container2 {
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+  }
+}
 
 .block__title {
   display: flex;
@@ -383,6 +395,12 @@ body {
   max-width: 36%;
   text-align: center;
   font-size: 27px;
+}
+@media (max-width: 436px) {
+  .block__card__p {
+    font-size: 13px;
+    text-transform: none;
+  }
 }
 
 .footer {
