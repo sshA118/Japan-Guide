@@ -204,7 +204,7 @@
                 commentItem.classList.add('comment-item');
                 commentItem.innerHTML = `
                     <p><strong>Имя:</strong> ${comment.name}</p>
-                    <p><strong>Возраст:</strong> ${comment.age || 'Не указан'}</p>
+                    <p><strong>Достопримечательность:</strong> ${comment.age || 'Не указан'}</p>
                     <p><strong>Комментарий:</strong> ${comment.text}</p>
                     <button data-id="${comment.id}">Удалить</button>
                 `;
