@@ -11,7 +11,7 @@
     const dataLoader = new DataLoader(urlMoc);
     const imageGallery = new ImageGallery();
     const modal = new Modal();
-    const mapManager = new MapManager();
+    // const mapManager = new MapManager();
 
     dataLoader.loadData()
         .then(data => {
@@ -27,8 +27,8 @@
             imageGallery.setupThumbnails(item);
             imageGallery.updateText(item.title, item.detail);
 
-            mapManager.saveMapData(item.maps);
-            mapManager.initMap();
+            // mapManager.saveMapData(item.maps);
+            // mapManager.initMap();
 
             modal.init();
         })
@@ -157,32 +157,32 @@
         this.fullImage.src = this.thumbnails[this.currentIndex].getAttribute('data-full');
     }
     }
-    class MapManager {
-    constructor() {
-        this.mapElement = document.getElementById('YMapsID');
-    }
+    // class MapManager {
+    // constructor() {
+    //     this.mapElement = document.getElementById('YMapsID');
+    // }
 
-    saveMapData(mapData) {
-        localStorage.setItem('map', JSON.stringify(mapData));
-    }
-    initMap() {
-        const map = localStorage.getItem('map');
-        console.log(map);
+    // saveMapData(mapData) {
+    //     localStorage.setItem('map', JSON.stringify(mapData));
+    // }
+    // initMap() {
+    //     const map = localStorage.getItem('map');
+    //     console.log(map);
         
-        ymaps.ready(() => {
-            const parsedMap = JSON.parse(map);
-            const Map = new ymaps.Map(this.mapElement, {
-                center: parsedMap,
-                zoom: 11,
-            });
-            const myPlacemark = new ymaps.Placemark(parsedMap, {
-                content: 'Токио',
-            });
-            Map.geoObjects.add(myPlacemark);
-        });
-    }
+    //     ymaps.ready(() => {
+    //         const parsedMap = JSON.parse(map);
+    //         const Map = new ymaps.Map(this.mapElement, {
+    //             center: parsedMap,
+    //             zoom: 11,
+    //         });
+    //         const myPlacemark = new ymaps.Placemark(parsedMap, {
+    //             content: 'Токио',
+    //         });
+    //         Map.geoObjects.add(myPlacemark);
+    //     });
+    // }
 
-    }
+    // }
         const commentForm = document.getElementById('commentForm');
         const commentsList = document.querySelector('.comments-list');
 

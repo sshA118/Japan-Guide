@@ -37,25 +37,6 @@
   color: #fff;
 }
 
-.block__ymaps {
-  display: flex;
-  margin-left: 3%;
-  margin-right: 3%;
-  height: 500px;
-  max-width: 100%;
-  margin-top: 3%;
-}
-@media (max-width: 426px) {
-  .block__ymaps {
-    height: 200px;
-  }
-}
-@media (max-width: 376px) {
-  .block__ymaps {
-    height: 200px;
-  }
-}
-
 .gallery {
   display: flex;
   gap: 10px;
@@ -146,8 +127,6 @@
   gap: 1%;
   margin-top: 2%;
   justify-content: space-around;
-  scroll-snap-align: start;
-  overflow-x: scroll;
 }
 
 .bigImage {

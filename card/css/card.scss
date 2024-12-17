@@ -28,20 +28,20 @@
         }
     }
 }
-.block__ymaps{
-    display: flex;
-    margin-left: 3%;
-    margin-right: 3%;   
-    height: 500px;
-    max-width: 100%;
-    margin-top: 3%;
-    @media (max-width:426px){  
-        height:200px;
-    }
-    @media (max-width:376px){  
-        height:200px;
-    }
-}
+// .block__ymaps{
+//     display: flex;
+//     margin-left: 3%;
+//     margin-right: 3%;   
+//     height: 500px;
+//     max-width: 100%;
+//     margin-top: 3%;
+//     @media (max-width:426px){  
+//         height:200px;
+//     }
+//     @media (max-width:376px){  
+//         height:200px;
+//     }
+// }
 .gallery {
     display: flex;
     gap: 10px;
@@ -80,7 +80,8 @@
     @media (max-width: 436px) {
       max-width: 70%;
       max-height: 70%;
-
+        
+    
     }
   }
 
@@ -123,8 +124,6 @@
     gap: 1%;
     margin-top: 2%;
     justify-content: space-around;
-    scroll-snap-align: start;
-    overflow-x: scroll;
 }
 .bigImage{
     border-radius: 15px;
