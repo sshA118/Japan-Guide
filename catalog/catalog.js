@@ -132,7 +132,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const loader = document.getElementById('infinity__scroll');
         loader.style.display = 'flex';
-
         const url = `${urlMoc}?page=${page}&limit=${limit}`;
         fetch(url)
             .then(response => response.json())
@@ -223,3 +222,4 @@ document.addEventListener('DOMContentLoaded', function () {
 
     loadData();
 });
+    
